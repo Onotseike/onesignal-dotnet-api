@@ -38,7 +38,7 @@ public partial class User : IEquatable<User>, IValidatableObject
     /// <param name="identity">identity.</param>
     /// <param name="subscriptions">subscriptions.</param>
     /// <param name="subscriptionOptions">subscriptionOptions.</param>
-    public User(PropertiesObject properties = default(PropertiesObject), Dictionary<string, Object> identity = default(Dictionary<string, Object>), List<SubscriptionObject> subscriptions = default(List<SubscriptionObject>), UserSubscriptionOptions subscriptionOptions = default(UserSubscriptionOptions))
+    public User(PropertiesObject properties = default, Dictionary<string, Object> identity = default, List<SubscriptionObject> subscriptions = default, UserSubscriptionOptions subscriptionOptions = default)
     {
         this.Properties = properties;
         this.Identity = identity;
@@ -77,12 +77,12 @@ public partial class User : IEquatable<User>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class User {\n");
-        sb.Append("  Properties: ").Append(Properties).Append("\n");
-        sb.Append("  Identity: ").Append(Identity).Append("\n");
-        sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
-        sb.Append("  SubscriptionOptions: ").Append(SubscriptionOptions).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class User {\n");
+        _ = sb.Append("  Properties: ").Append(Properties).Append("\n");
+        _ = sb.Append("  Identity: ").Append(Identity).Append("\n");
+        _ = sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
+        _ = sb.Append("  SubscriptionOptions: ").Append(SubscriptionOptions).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

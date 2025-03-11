@@ -38,7 +38,7 @@ public partial class CreateNotificationSuccessResponse : IEquatable<CreateNotifi
     /// <param name="recipients">Estimated number of subscribers targetted by notification..</param>
     /// <param name="externalId">externalId.</param>
     /// <param name="errors">errors.</param>
-    public CreateNotificationSuccessResponse(string id = default(string), int recipients = default(int), string externalId = default(string), Notification200Errors errors = default(Notification200Errors))
+    public CreateNotificationSuccessResponse(string id = default, int recipients = default, string externalId = default, Notification200Errors errors = default)
     {
         this.Id = id;
         this.Recipients = recipients;
@@ -78,12 +78,12 @@ public partial class CreateNotificationSuccessResponse : IEquatable<CreateNotifi
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateNotificationSuccessResponse {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Recipients: ").Append(Recipients).Append("\n");
-        sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
-        sb.Append("  Errors: ").Append(Errors).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateNotificationSuccessResponse {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Recipients: ").Append(Recipients).Append("\n");
+        _ = sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+        _ = sb.Append("  Errors: ").Append(Errors).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

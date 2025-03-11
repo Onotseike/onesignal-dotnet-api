@@ -36,7 +36,7 @@ public partial class UpdateLiveActivitySuccessResponse : IEquatable<UpdateLiveAc
     /// </summary>
     /// <param name="notificationId">notificationId.</param>
     /// <param name="errors">errors.</param>
-    public UpdateLiveActivitySuccessResponse(string notificationId = default(string), Notification200Errors errors = default(Notification200Errors))
+    public UpdateLiveActivitySuccessResponse(string notificationId = default, Notification200Errors errors = default)
     {
         this.NotificationId = notificationId;
         this.Errors = errors;
@@ -61,10 +61,10 @@ public partial class UpdateLiveActivitySuccessResponse : IEquatable<UpdateLiveAc
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdateLiveActivitySuccessResponse {\n");
-        sb.Append("  NotificationId: ").Append(NotificationId).Append("\n");
-        sb.Append("  Errors: ").Append(Errors).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdateLiveActivitySuccessResponse {\n");
+        _ = sb.Append("  NotificationId: ").Append(NotificationId).Append("\n");
+        _ = sb.Append("  Errors: ").Append(Errors).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

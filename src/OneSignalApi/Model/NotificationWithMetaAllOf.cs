@@ -45,7 +45,7 @@ public partial class NotificationWithMetaAllOf : IEquatable<NotificationWithMeta
     /// <param name="platformDeliveryStats">platformDeliveryStats.</param>
     /// <param name="received">Confirmed Deliveries number of devices that received the push notification. Paid Feature Only. Free accounts will see 0..</param>
     /// <param name="throttleRatePerMinute">number of push notifications sent per minute. Paid Feature Only. If throttling is not enabled for the app or the notification, and for free accounts, null is returned. Refer to Throttling for more details..</param>
-    public NotificationWithMetaAllOf(int remaining = default(int), int successful = default(int), int failed = default(int), int errored = default(int), int converted = default(int), long queuedAt = default(long), long? sendAfter = default(long?), long? completedAt = default(long?), PlatformDeliveryData platformDeliveryStats = default(PlatformDeliveryData), int? received = default(int?), int? throttleRatePerMinute = default(int?))
+    public NotificationWithMetaAllOf(int remaining = default, int successful = default, int failed = default, int errored = default, int converted = default, long queuedAt = default, long? sendAfter = default, long? completedAt = default, PlatformDeliveryData platformDeliveryStats = default, int? received = default, int? throttleRatePerMinute = default)
     {
         this.Remaining = remaining;
         this.Successful = successful;
@@ -143,19 +143,19 @@ public partial class NotificationWithMetaAllOf : IEquatable<NotificationWithMeta
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class NotificationWithMetaAllOf {\n");
-        sb.Append("  Remaining: ").Append(Remaining).Append("\n");
-        sb.Append("  Successful: ").Append(Successful).Append("\n");
-        sb.Append("  Failed: ").Append(Failed).Append("\n");
-        sb.Append("  Errored: ").Append(Errored).Append("\n");
-        sb.Append("  Converted: ").Append(Converted).Append("\n");
-        sb.Append("  QueuedAt: ").Append(QueuedAt).Append("\n");
-        sb.Append("  SendAfter: ").Append(SendAfter).Append("\n");
-        sb.Append("  CompletedAt: ").Append(CompletedAt).Append("\n");
-        sb.Append("  PlatformDeliveryStats: ").Append(PlatformDeliveryStats).Append("\n");
-        sb.Append("  Received: ").Append(Received).Append("\n");
-        sb.Append("  ThrottleRatePerMinute: ").Append(ThrottleRatePerMinute).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class NotificationWithMetaAllOf {\n");
+        _ = sb.Append("  Remaining: ").Append(Remaining).Append("\n");
+        _ = sb.Append("  Successful: ").Append(Successful).Append("\n");
+        _ = sb.Append("  Failed: ").Append(Failed).Append("\n");
+        _ = sb.Append("  Errored: ").Append(Errored).Append("\n");
+        _ = sb.Append("  Converted: ").Append(Converted).Append("\n");
+        _ = sb.Append("  QueuedAt: ").Append(QueuedAt).Append("\n");
+        _ = sb.Append("  SendAfter: ").Append(SendAfter).Append("\n");
+        _ = sb.Append("  CompletedAt: ").Append(CompletedAt).Append("\n");
+        _ = sb.Append("  PlatformDeliveryStats: ").Append(PlatformDeliveryStats).Append("\n");
+        _ = sb.Append("  Received: ").Append(Received).Append("\n");
+        _ = sb.Append("  ThrottleRatePerMinute: ").Append(ThrottleRatePerMinute).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

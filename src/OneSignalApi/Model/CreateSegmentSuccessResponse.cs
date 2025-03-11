@@ -36,7 +36,7 @@ public partial class CreateSegmentSuccessResponse : IEquatable<CreateSegmentSucc
     /// </summary>
     /// <param name="success">success.</param>
     /// <param name="id">UUID of created segment.</param>
-    public CreateSegmentSuccessResponse(bool success = default(bool), string id = default(string))
+    public CreateSegmentSuccessResponse(bool success = default, string id = default)
     {
         this.Success = success;
         this.Id = id;
@@ -62,10 +62,10 @@ public partial class CreateSegmentSuccessResponse : IEquatable<CreateSegmentSucc
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateSegmentSuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateSegmentSuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -77,7 +77,7 @@ public partial class PlayerNotificationTarget : IEquatable<PlayerNotificationTar
     /// <param name="includeAndroidRegIds">Not Recommended: Please consider using include_player_ids or include_external_user_ids instead. Target using Android device registration IDs. If a token does not correspond to an existing user, a new user will be created. Example: APA91bEeiUeSukAAUdnw3O2RB45FWlSpgJ7Ji_... Limit of 2,000 entries per REST API call .</param>
     /// <param name="includeAliases">includeAliases.</param>
     /// <param name="targetChannel">targetChannel.</param>
-    public PlayerNotificationTarget(List<string> includePlayerIds = default(List<string>), List<string> includeExternalUserIds = default(List<string>), List<string> includeEmailTokens = default(List<string>), List<string> includePhoneNumbers = default(List<string>), List<string> includeIosTokens = default(List<string>), List<string> includeWpWnsUris = default(List<string>), List<string> includeAmazonRegIds = default(List<string>), List<string> includeChromeRegIds = default(List<string>), List<string> includeChromeWebRegIds = default(List<string>), List<string> includeAndroidRegIds = default(List<string>), PlayerNotificationTargetIncludeAliases includeAliases = default(PlayerNotificationTargetIncludeAliases), TargetChannelEnum? targetChannel = default(TargetChannelEnum?))
+    public PlayerNotificationTarget(List<string> includePlayerIds = default, List<string> includeExternalUserIds = default, List<string> includeEmailTokens = default, List<string> includePhoneNumbers = default, List<string> includeIosTokens = default, List<string> includeWpWnsUris = default, List<string> includeAmazonRegIds = default, List<string> includeChromeRegIds = default, List<string> includeChromeWebRegIds = default, List<string> includeAndroidRegIds = default, PlayerNotificationTargetIncludeAliases includeAliases = default, TargetChannelEnum? targetChannel = default)
     {
         this.IncludePlayerIds = includePlayerIds;
         this.IncludeExternalUserIds = includeExternalUserIds;
@@ -178,20 +178,20 @@ public partial class PlayerNotificationTarget : IEquatable<PlayerNotificationTar
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlayerNotificationTarget {\n");
-        sb.Append("  IncludePlayerIds: ").Append(IncludePlayerIds).Append("\n");
-        sb.Append("  IncludeExternalUserIds: ").Append(IncludeExternalUserIds).Append("\n");
-        sb.Append("  IncludeEmailTokens: ").Append(IncludeEmailTokens).Append("\n");
-        sb.Append("  IncludePhoneNumbers: ").Append(IncludePhoneNumbers).Append("\n");
-        sb.Append("  IncludeIosTokens: ").Append(IncludeIosTokens).Append("\n");
-        sb.Append("  IncludeWpWnsUris: ").Append(IncludeWpWnsUris).Append("\n");
-        sb.Append("  IncludeAmazonRegIds: ").Append(IncludeAmazonRegIds).Append("\n");
-        sb.Append("  IncludeChromeRegIds: ").Append(IncludeChromeRegIds).Append("\n");
-        sb.Append("  IncludeChromeWebRegIds: ").Append(IncludeChromeWebRegIds).Append("\n");
-        sb.Append("  IncludeAndroidRegIds: ").Append(IncludeAndroidRegIds).Append("\n");
-        sb.Append("  IncludeAliases: ").Append(IncludeAliases).Append("\n");
-        sb.Append("  TargetChannel: ").Append(TargetChannel).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlayerNotificationTarget {\n");
+        _ = sb.Append("  IncludePlayerIds: ").Append(IncludePlayerIds).Append("\n");
+        _ = sb.Append("  IncludeExternalUserIds: ").Append(IncludeExternalUserIds).Append("\n");
+        _ = sb.Append("  IncludeEmailTokens: ").Append(IncludeEmailTokens).Append("\n");
+        _ = sb.Append("  IncludePhoneNumbers: ").Append(IncludePhoneNumbers).Append("\n");
+        _ = sb.Append("  IncludeIosTokens: ").Append(IncludeIosTokens).Append("\n");
+        _ = sb.Append("  IncludeWpWnsUris: ").Append(IncludeWpWnsUris).Append("\n");
+        _ = sb.Append("  IncludeAmazonRegIds: ").Append(IncludeAmazonRegIds).Append("\n");
+        _ = sb.Append("  IncludeChromeRegIds: ").Append(IncludeChromeRegIds).Append("\n");
+        _ = sb.Append("  IncludeChromeWebRegIds: ").Append(IncludeChromeWebRegIds).Append("\n");
+        _ = sb.Append("  IncludeAndroidRegIds: ").Append(IncludeAndroidRegIds).Append("\n");
+        _ = sb.Append("  IncludeAliases: ").Append(IncludeAliases).Append("\n");
+        _ = sb.Append("  TargetChannel: ").Append(TargetChannel).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -41,7 +41,7 @@ public partial class BeginLiveActivityRequest : IEquatable<BeginLiveActivityRequ
     /// </summary>
     /// <param name="pushToken">pushToken (required).</param>
     /// <param name="subscriptionId">subscriptionId (required).</param>
-    public BeginLiveActivityRequest(string pushToken = default(string), string subscriptionId = default(string))
+    public BeginLiveActivityRequest(string pushToken = default, string subscriptionId = default)
     {
         // to ensure "pushToken" is required (not null)
         if (pushToken == null)
@@ -76,10 +76,10 @@ public partial class BeginLiveActivityRequest : IEquatable<BeginLiveActivityRequ
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class BeginLiveActivityRequest {\n");
-        sb.Append("  PushToken: ").Append(PushToken).Append("\n");
-        sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class BeginLiveActivityRequest {\n");
+        _ = sb.Append("  PushToken: ").Append(PushToken).Append("\n");
+        _ = sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

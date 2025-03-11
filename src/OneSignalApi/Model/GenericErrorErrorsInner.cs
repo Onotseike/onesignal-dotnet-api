@@ -36,7 +36,7 @@ public partial class GenericErrorErrorsInner : IEquatable<GenericErrorErrorsInne
     /// </summary>
     /// <param name="code">code.</param>
     /// <param name="title">title.</param>
-    public GenericErrorErrorsInner(string code = default(string), string title = default(string))
+    public GenericErrorErrorsInner(string code = default, string title = default)
     {
         this.Code = code;
         this.Title = title;
@@ -61,10 +61,10 @@ public partial class GenericErrorErrorsInner : IEquatable<GenericErrorErrorsInne
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class GenericErrorErrorsInner {\n");
-        sb.Append("  Code: ").Append(Code).Append("\n");
-        sb.Append("  Title: ").Append(Title).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class GenericErrorErrorsInner {\n");
+        _ = sb.Append("  Code: ").Append(Code).Append("\n");
+        _ = sb.Append("  Title: ").Append(Title).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -157,7 +157,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="segment"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>CreateSegmentSuccessResponse</returns>
-    CreateSegmentSuccessResponse CreateSegments(string appId, Segment segment = default(Segment), int operationIndex = 0);
+    CreateSegmentSuccessResponse CreateSegments(string appId, Segment segment = default, int operationIndex = 0);
 
     /// <summary>
     /// Create Segments
@@ -170,7 +170,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="segment"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of CreateSegmentSuccessResponse</returns>
-    ApiResponse<CreateSegmentSuccessResponse> CreateSegmentsWithHttpInfo(string appId, Segment segment = default(Segment), int operationIndex = 0);
+    ApiResponse<CreateSegmentSuccessResponse> CreateSegmentsWithHttpInfo(string appId, Segment segment = default, int operationIndex = 0);
     /// <summary>
     /// 
     /// </summary>
@@ -419,7 +419,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="exportPlayersRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ExportPlayersSuccessResponse</returns>
-    ExportPlayersSuccessResponse ExportPlayers(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0);
+    ExportPlayersSuccessResponse ExportPlayers(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0);
 
     /// <summary>
     /// Export CSV of Players
@@ -432,7 +432,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="exportPlayersRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of ExportPlayersSuccessResponse</returns>
-    ApiResponse<ExportPlayersSuccessResponse> ExportPlayersWithHttpInfo(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0);
+    ApiResponse<ExportPlayersSuccessResponse> ExportPlayersWithHttpInfo(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0);
     /// <summary>
     /// 
     /// </summary>
@@ -644,7 +644,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="kind">Kind of notifications returned:   * unset - All notification types (default)   * &#x60;0&#x60; - Dashboard only   * &#x60;1&#x60; - API only   * &#x60;3&#x60; - Automated only  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>NotificationSlice</returns>
-    NotificationSlice GetNotifications(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0);
+    NotificationSlice GetNotifications(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0);
 
     /// <summary>
     /// View notifications
@@ -659,7 +659,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="kind">Kind of notifications returned:   * unset - All notification types (default)   * &#x60;0&#x60; - Dashboard only   * &#x60;1&#x60; - API only   * &#x60;3&#x60; - Automated only  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of NotificationSlice</returns>
-    ApiResponse<NotificationSlice> GetNotificationsWithHttpInfo(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0);
+    ApiResponse<NotificationSlice> GetNotificationsWithHttpInfo(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0);
     /// <summary>
     /// View Outcomes
     /// </summary>
@@ -675,7 +675,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="outcomeAttribution">Optional Attribution type for the outcomes. The values can be direct or influenced or unattributed. Example: outcome_attribution&#x3D;direct Default is total (returns direct+influenced+unattributed) if the parameter is omitted.  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>OutcomesData</returns>
-    OutcomesData GetOutcomes(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0);
+    OutcomesData GetOutcomes(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0);
 
     /// <summary>
     /// View Outcomes
@@ -692,7 +692,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="outcomeAttribution">Optional Attribution type for the outcomes. The values can be direct or influenced or unattributed. Example: outcome_attribution&#x3D;direct Default is total (returns direct+influenced+unattributed) if the parameter is omitted.  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of OutcomesData</returns>
-    ApiResponse<OutcomesData> GetOutcomesWithHttpInfo(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0);
+    ApiResponse<OutcomesData> GetOutcomesWithHttpInfo(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0);
     /// <summary>
     /// View device
     /// </summary>
@@ -705,7 +705,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="emailAuthHash">Email - Only required if you have enabled Identity Verification and device_type is email (11). (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>Player</returns>
-    Player GetPlayer(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0);
+    Player GetPlayer(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0);
 
     /// <summary>
     /// View device
@@ -719,7 +719,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="emailAuthHash">Email - Only required if you have enabled Identity Verification and device_type is email (11). (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of Player</returns>
-    ApiResponse<Player> GetPlayerWithHttpInfo(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0);
+    ApiResponse<Player> GetPlayerWithHttpInfo(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0);
     /// <summary>
     /// View devices
     /// </summary>
@@ -732,7 +732,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="offset">Result offset. Default is 0. Results are sorted by id; (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>PlayerSlice</returns>
-    PlayerSlice GetPlayers(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+    PlayerSlice GetPlayers(string appId, int? limit = default, int? offset = default, int operationIndex = 0);
 
     /// <summary>
     /// View devices
@@ -746,7 +746,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="offset">Result offset. Default is 0. Results are sorted by id; (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of PlayerSlice</returns>
-    ApiResponse<PlayerSlice> GetPlayersWithHttpInfo(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+    ApiResponse<PlayerSlice> GetPlayersWithHttpInfo(string appId, int? limit = default, int? offset = default, int operationIndex = 0);
     /// <summary>
     /// 
     /// </summary>
@@ -919,7 +919,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="updatePlayerTagsRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>UpdatePlayerTagsSuccessResponse</returns>
-    UpdatePlayerTagsSuccessResponse UpdatePlayerTags(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0);
+    UpdatePlayerTagsSuccessResponse UpdatePlayerTags(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0);
 
     /// <summary>
     /// Edit tags with external user id
@@ -933,7 +933,7 @@ public interface IDefaultApiSync : IApiAccessor
     /// <param name="updatePlayerTagsRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of UpdatePlayerTagsSuccessResponse</returns>
-    ApiResponse<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsWithHttpInfo(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0);
+    ApiResponse<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsWithHttpInfo(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0);
     /// <summary>
     /// 
     /// </summary>
@@ -1012,7 +1012,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Start Live Activity
@@ -1027,7 +1027,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    System.Threading.Tasks.Task<ApiResponse<Object>> BeginLiveActivityWithHttpInfoAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Object>> BeginLiveActivityWithHttpInfoAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Stop a scheduled or currently outgoing notification
     /// </summary>
@@ -1040,7 +1040,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CancelNotificationSuccessResponse</returns>
-    System.Threading.Tasks.Task<CancelNotificationSuccessResponse> CancelNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<CancelNotificationSuccessResponse> CancelNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Stop a scheduled or currently outgoing notification
@@ -1054,7 +1054,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CancelNotificationSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<CancelNotificationSuccessResponse>> CancelNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<CancelNotificationSuccessResponse>> CancelNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Create an app
     /// </summary>
@@ -1066,7 +1066,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    System.Threading.Tasks.Task<App> CreateAppAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<App> CreateAppAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Create an app
@@ -1079,7 +1079,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    System.Threading.Tasks.Task<ApiResponse<App>> CreateAppWithHttpInfoAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<App>> CreateAppWithHttpInfoAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Create notification
     /// </summary>
@@ -1091,7 +1091,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreateNotificationSuccessResponse</returns>
-    System.Threading.Tasks.Task<CreateNotificationSuccessResponse> CreateNotificationAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<CreateNotificationSuccessResponse> CreateNotificationAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Create notification
@@ -1104,7 +1104,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreateNotificationSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<CreateNotificationSuccessResponse>> CreateNotificationWithHttpInfoAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<CreateNotificationSuccessResponse>> CreateNotificationWithHttpInfoAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Add a device
     /// </summary>
@@ -1116,7 +1116,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreatePlayerSuccessResponse</returns>
-    System.Threading.Tasks.Task<CreatePlayerSuccessResponse> CreatePlayerAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<CreatePlayerSuccessResponse> CreatePlayerAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Add a device
@@ -1129,7 +1129,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreatePlayerSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<CreatePlayerSuccessResponse>> CreatePlayerWithHttpInfoAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<CreatePlayerSuccessResponse>> CreatePlayerWithHttpInfoAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Create Segments
     /// </summary>
@@ -1142,7 +1142,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreateSegmentSuccessResponse</returns>
-    System.Threading.Tasks.Task<CreateSegmentSuccessResponse> CreateSegmentsAsync(string appId, Segment segment = default(Segment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<CreateSegmentSuccessResponse> CreateSegmentsAsync(string appId, Segment segment = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Create Segments
@@ -1156,7 +1156,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreateSegmentSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<CreateSegmentSuccessResponse>> CreateSegmentsWithHttpInfoAsync(string appId, Segment segment = default(Segment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<CreateSegmentSuccessResponse>> CreateSegmentsWithHttpInfoAsync(string appId, Segment segment = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1171,7 +1171,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse201</returns>
-    System.Threading.Tasks.Task<InlineResponse201> CreateSubscriptionAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse201> CreateSubscriptionAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1187,7 +1187,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateSubscriptionWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateSubscriptionWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1200,7 +1200,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of User</returns>
-    System.Threading.Tasks.Task<User> CreateUserAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<User> CreateUserAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1214,7 +1214,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (User)</returns>
-    System.Threading.Tasks.Task<ApiResponse<User>> CreateUserWithHttpInfoAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<User>> CreateUserWithHttpInfoAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1229,7 +1229,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    System.Threading.Tasks.Task<InlineResponse200> DeleteAliasAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse200> DeleteAliasAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1245,7 +1245,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> DeleteAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> DeleteAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Delete a user record
     /// </summary>
@@ -1258,7 +1258,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of DeletePlayerSuccessResponse</returns>
-    System.Threading.Tasks.Task<DeletePlayerSuccessResponse> DeletePlayerAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<DeletePlayerSuccessResponse> DeletePlayerAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete a user record
@@ -1272,7 +1272,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (DeletePlayerSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<DeletePlayerSuccessResponse>> DeletePlayerWithHttpInfoAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<DeletePlayerSuccessResponse>> DeletePlayerWithHttpInfoAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Delete Segments
     /// </summary>
@@ -1285,7 +1285,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of DeleteSegmentSuccessResponse</returns>
-    System.Threading.Tasks.Task<DeleteSegmentSuccessResponse> DeleteSegmentsAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<DeleteSegmentSuccessResponse> DeleteSegmentsAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete Segments
@@ -1299,7 +1299,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (DeleteSegmentSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<DeleteSegmentSuccessResponse>> DeleteSegmentsWithHttpInfoAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<DeleteSegmentSuccessResponse>> DeleteSegmentsWithHttpInfoAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1312,7 +1312,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1326,7 +1326,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1340,7 +1340,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1355,7 +1355,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Stop Live Activity
     /// </summary>
@@ -1369,7 +1369,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Stop Live Activity
@@ -1384,7 +1384,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    System.Threading.Tasks.Task<ApiResponse<Object>> EndLiveActivityWithHttpInfoAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Object>> EndLiveActivityWithHttpInfoAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Export CSV of Events
     /// </summary>
@@ -1397,7 +1397,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ExportEventsSuccessResponse</returns>
-    System.Threading.Tasks.Task<ExportEventsSuccessResponse> ExportEventsAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ExportEventsSuccessResponse> ExportEventsAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Export CSV of Events
@@ -1411,7 +1411,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (ExportEventsSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<ExportEventsSuccessResponse>> ExportEventsWithHttpInfoAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<ExportEventsSuccessResponse>> ExportEventsWithHttpInfoAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Export CSV of Players
     /// </summary>
@@ -1424,7 +1424,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ExportPlayersSuccessResponse</returns>
-    System.Threading.Tasks.Task<ExportPlayersSuccessResponse> ExportPlayersAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ExportPlayersSuccessResponse> ExportPlayersAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Export CSV of Players
@@ -1438,7 +1438,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (ExportPlayersSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<ExportPlayersSuccessResponse>> ExportPlayersWithHttpInfoAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<ExportPlayersSuccessResponse>> ExportPlayersWithHttpInfoAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1451,7 +1451,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    System.Threading.Tasks.Task<UserIdentityResponse> FetchAliasesAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UserIdentityResponse> FetchAliasesAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1465,7 +1465,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> FetchAliasesWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> FetchAliasesWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1479,7 +1479,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of User</returns>
-    System.Threading.Tasks.Task<User> FetchUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<User> FetchUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1494,7 +1494,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (User)</returns>
-    System.Threading.Tasks.Task<ApiResponse<User>> FetchUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<User>> FetchUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1508,7 +1508,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    System.Threading.Tasks.Task<InlineResponse200> FetchUserIdentityAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse200> FetchUserIdentityAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1523,7 +1523,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> FetchUserIdentityWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> FetchUserIdentityWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View an app
     /// </summary>
@@ -1535,7 +1535,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    System.Threading.Tasks.Task<App> GetAppAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<App> GetAppAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View an app
@@ -1548,7 +1548,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    System.Threading.Tasks.Task<ApiResponse<App>> GetAppWithHttpInfoAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<App>> GetAppWithHttpInfoAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View apps
     /// </summary>
@@ -1559,7 +1559,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of List&lt;App&gt;</returns>
-    System.Threading.Tasks.Task<List<App>> GetAppsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<List<App>> GetAppsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View apps
@@ -1571,7 +1571,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (List&lt;App&gt;)</returns>
-    System.Threading.Tasks.Task<ApiResponse<List<App>>> GetAppsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<List<App>>> GetAppsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1584,7 +1584,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse2003</returns>
-    System.Threading.Tasks.Task<InlineResponse2003> GetEligibleIamsAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse2003> GetEligibleIamsAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1598,7 +1598,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> GetEligibleIamsWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> GetEligibleIamsWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View notification
     /// </summary>
@@ -1611,7 +1611,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationWithMeta</returns>
-    System.Threading.Tasks.Task<NotificationWithMeta> GetNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<NotificationWithMeta> GetNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View notification
@@ -1625,7 +1625,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationWithMeta)</returns>
-    System.Threading.Tasks.Task<ApiResponse<NotificationWithMeta>> GetNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<NotificationWithMeta>> GetNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Notification History
     /// </summary>
@@ -1638,7 +1638,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationHistorySuccessResponse</returns>
-    System.Threading.Tasks.Task<NotificationHistorySuccessResponse> GetNotificationHistoryAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<NotificationHistorySuccessResponse> GetNotificationHistoryAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Notification History
@@ -1652,7 +1652,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationHistorySuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<NotificationHistorySuccessResponse>> GetNotificationHistoryWithHttpInfoAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<NotificationHistorySuccessResponse>> GetNotificationHistoryWithHttpInfoAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View notifications
     /// </summary>
@@ -1667,7 +1667,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationSlice</returns>
-    System.Threading.Tasks.Task<NotificationSlice> GetNotificationsAsync(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<NotificationSlice> GetNotificationsAsync(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View notifications
@@ -1683,7 +1683,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationSlice)</returns>
-    System.Threading.Tasks.Task<ApiResponse<NotificationSlice>> GetNotificationsWithHttpInfoAsync(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<NotificationSlice>> GetNotificationsWithHttpInfoAsync(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View Outcomes
     /// </summary>
@@ -1700,7 +1700,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of OutcomesData</returns>
-    System.Threading.Tasks.Task<OutcomesData> GetOutcomesAsync(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<OutcomesData> GetOutcomesAsync(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View Outcomes
@@ -1718,7 +1718,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (OutcomesData)</returns>
-    System.Threading.Tasks.Task<ApiResponse<OutcomesData>> GetOutcomesWithHttpInfoAsync(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<OutcomesData>> GetOutcomesWithHttpInfoAsync(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View device
     /// </summary>
@@ -1732,7 +1732,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of Player</returns>
-    System.Threading.Tasks.Task<Player> GetPlayerAsync(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<Player> GetPlayerAsync(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View device
@@ -1747,7 +1747,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (Player)</returns>
-    System.Threading.Tasks.Task<ApiResponse<Player>> GetPlayerWithHttpInfoAsync(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Player>> GetPlayerWithHttpInfoAsync(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// View devices
     /// </summary>
@@ -1761,7 +1761,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of PlayerSlice</returns>
-    System.Threading.Tasks.Task<PlayerSlice> GetPlayersAsync(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<PlayerSlice> GetPlayersAsync(string appId, int? limit = default, int? offset = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// View devices
@@ -1776,7 +1776,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (PlayerSlice)</returns>
-    System.Threading.Tasks.Task<ApiResponse<PlayerSlice>> GetPlayersWithHttpInfoAsync(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<PlayerSlice>> GetPlayersWithHttpInfoAsync(string appId, int? limit = default, int? offset = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1791,7 +1791,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    System.Threading.Tasks.Task<InlineResponse200> IdentifyUserByAliasAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse200> IdentifyUserByAliasAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1807,7 +1807,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> IdentifyUserByAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> IdentifyUserByAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1821,7 +1821,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    System.Threading.Tasks.Task<UserIdentityResponse> IdentifyUserBySubscriptionIdAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UserIdentityResponse> IdentifyUserBySubscriptionIdAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1836,7 +1836,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> IdentifyUserBySubscriptionIdWithHttpInfoAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> IdentifyUserBySubscriptionIdWithHttpInfoAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1850,7 +1850,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    System.Threading.Tasks.Task<UserIdentityResponse> TransferSubscriptionAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UserIdentityResponse> TransferSubscriptionAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -1865,7 +1865,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> TransferSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UserIdentityResponse>> TransferSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Update an app
     /// </summary>
@@ -1878,7 +1878,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    System.Threading.Tasks.Task<App> UpdateAppAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<App> UpdateAppAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Update an app
@@ -1892,7 +1892,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    System.Threading.Tasks.Task<ApiResponse<App>> UpdateAppWithHttpInfoAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<App>> UpdateAppWithHttpInfoAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Update a Live Activity via Push
     /// </summary>
@@ -1906,7 +1906,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdateLiveActivitySuccessResponse</returns>
-    System.Threading.Tasks.Task<UpdateLiveActivitySuccessResponse> UpdateLiveActivityAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UpdateLiveActivitySuccessResponse> UpdateLiveActivityAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Update a Live Activity via Push
@@ -1921,7 +1921,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdateLiveActivitySuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UpdateLiveActivitySuccessResponse>> UpdateLiveActivityWithHttpInfoAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UpdateLiveActivitySuccessResponse>> UpdateLiveActivityWithHttpInfoAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Edit device
     /// </summary>
@@ -1934,7 +1934,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdatePlayerSuccessResponse</returns>
-    System.Threading.Tasks.Task<UpdatePlayerSuccessResponse> UpdatePlayerAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UpdatePlayerSuccessResponse> UpdatePlayerAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Edit device
@@ -1948,7 +1948,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdatePlayerSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UpdatePlayerSuccessResponse>> UpdatePlayerWithHttpInfoAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UpdatePlayerSuccessResponse>> UpdatePlayerWithHttpInfoAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// Edit tags with external user id
     /// </summary>
@@ -1962,7 +1962,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdatePlayerTagsSuccessResponse</returns>
-    System.Threading.Tasks.Task<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Edit tags with external user id
@@ -1977,7 +1977,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdatePlayerTagsSuccessResponse)</returns>
-    System.Threading.Tasks.Task<ApiResponse<UpdatePlayerTagsSuccessResponse>> UpdatePlayerTagsWithHttpInfoAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<UpdatePlayerTagsSuccessResponse>> UpdatePlayerTagsWithHttpInfoAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -1991,7 +1991,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -2006,7 +2006,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     /// <summary>
     /// 
     /// </summary>
@@ -2021,7 +2021,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse202</returns>
-    System.Threading.Tasks.Task<InlineResponse202> UpdateUserAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<InlineResponse202> UpdateUserAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// 
@@ -2037,7 +2037,7 @@ public interface IDefaultApiAsync : IApiAccessor
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse202)</returns>
-    System.Threading.Tasks.Task<ApiResponse<InlineResponse202>> UpdateUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    System.Threading.Tasks.Task<ApiResponse<InlineResponse202>> UpdateUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
     #endregion Asynchronous Operations
 }
 
@@ -2195,14 +2195,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2254,7 +2254,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    public async System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await BeginLiveActivityWithHttpInfoAsync(appId, activityId, beginLiveActivityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+    public async System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default) => await BeginLiveActivityWithHttpInfoAsync(appId, activityId, beginLiveActivityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
 
     /// <summary>
     /// Start Live Activity Starts a Live Activity
@@ -2266,7 +2266,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> BeginLiveActivityWithHttpInfoAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> BeginLiveActivityWithHttpInfoAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -2288,14 +2288,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2376,13 +2376,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2432,7 +2431,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CancelNotificationSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<CancelNotificationSuccessResponse> CancelNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<CancelNotificationSuccessResponse> CancelNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<CancelNotificationSuccessResponse> localVarResponse = await CancelNotificationWithHttpInfoAsync(appId, notificationId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -2447,7 +2446,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CancelNotificationSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CancelNotificationSuccessResponse>> CancelNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CancelNotificationSuccessResponse>> CancelNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -2463,13 +2462,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2541,14 +2539,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2596,7 +2594,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    public async System.Threading.Tasks.Task<App> CreateAppAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<App> CreateAppAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<App> localVarResponse = await CreateAppWithHttpInfoAsync(app, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -2610,7 +2608,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> CreateAppWithHttpInfoAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> CreateAppWithHttpInfoAsync(App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'app' is set
         if (app == null)
@@ -2620,14 +2618,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2698,14 +2696,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2753,7 +2751,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreateNotificationSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<CreateNotificationSuccessResponse> CreateNotificationAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<CreateNotificationSuccessResponse> CreateNotificationAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<CreateNotificationSuccessResponse> localVarResponse = await CreateNotificationWithHttpInfoAsync(notification, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -2767,7 +2765,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreateNotificationSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreateNotificationSuccessResponse>> CreateNotificationWithHttpInfoAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreateNotificationSuccessResponse>> CreateNotificationWithHttpInfoAsync(Notification notification, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'notification' is set
         if (notification == null)
@@ -2777,14 +2775,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2855,14 +2853,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2910,7 +2908,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreatePlayerSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<CreatePlayerSuccessResponse> CreatePlayerAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<CreatePlayerSuccessResponse> CreatePlayerAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<CreatePlayerSuccessResponse> localVarResponse = await CreatePlayerWithHttpInfoAsync(player, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -2924,7 +2922,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreatePlayerSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreatePlayerSuccessResponse>> CreatePlayerWithHttpInfoAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreatePlayerSuccessResponse>> CreatePlayerWithHttpInfoAsync(Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'player' is set
         if (player == null)
@@ -2934,14 +2932,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -2990,7 +2988,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="segment"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>CreateSegmentSuccessResponse</returns>
-    public CreateSegmentSuccessResponse CreateSegments(string appId, Segment segment = default(Segment), int operationIndex = 0)
+    public CreateSegmentSuccessResponse CreateSegments(string appId, Segment segment = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse> localVarResponse = CreateSegmentsWithHttpInfo(appId, segment);
         return localVarResponse.Data;
@@ -3004,7 +3002,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="segment"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of CreateSegmentSuccessResponse</returns>
-    public OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse> CreateSegmentsWithHttpInfo(string appId, Segment segment = default(Segment), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse> CreateSegmentsWithHttpInfo(string appId, Segment segment = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3014,14 +3012,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3071,7 +3069,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of CreateSegmentSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<CreateSegmentSuccessResponse> CreateSegmentsAsync(string appId, Segment segment = default(Segment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<CreateSegmentSuccessResponse> CreateSegmentsAsync(string appId, Segment segment = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse> localVarResponse = await CreateSegmentsWithHttpInfoAsync(appId, segment, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -3086,7 +3084,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (CreateSegmentSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse>> CreateSegmentsWithHttpInfoAsync(string appId, Segment segment = default(Segment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<CreateSegmentSuccessResponse>> CreateSegmentsWithHttpInfoAsync(string appId, Segment segment = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3096,14 +3094,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3199,14 +3197,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3260,7 +3258,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse201</returns>
-    public async System.Threading.Tasks.Task<InlineResponse201> CreateSubscriptionAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse201> CreateSubscriptionAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse201> localVarResponse = await CreateSubscriptionWithHttpInfoAsync(appId, aliasLabel, aliasId, createSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -3277,7 +3275,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse201>> CreateSubscriptionWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse201>> CreateSubscriptionWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, CreateSubscriptionRequestBody createSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3305,14 +3303,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3394,14 +3392,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3451,7 +3449,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of User</returns>
-    public async System.Threading.Tasks.Task<User> CreateUserAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<User> CreateUserAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<User> localVarResponse = await CreateUserWithHttpInfoAsync(appId, user, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -3466,7 +3464,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (User)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<User>> CreateUserWithHttpInfoAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<User>> CreateUserWithHttpInfoAsync(string appId, User user, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3482,14 +3480,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3585,13 +3583,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3645,7 +3642,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    public async System.Threading.Tasks.Task<InlineResponse200> DeleteAliasAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse200> DeleteAliasAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse200> localVarResponse = await DeleteAliasWithHttpInfoAsync(appId, aliasLabel, aliasId, aliasLabelToDelete, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -3662,7 +3659,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> DeleteAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> DeleteAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, string aliasLabelToDelete, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3690,13 +3687,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3778,13 +3774,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3834,7 +3829,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of DeletePlayerSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<DeletePlayerSuccessResponse> DeletePlayerAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<DeletePlayerSuccessResponse> DeletePlayerAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<DeletePlayerSuccessResponse> localVarResponse = await DeletePlayerWithHttpInfoAsync(appId, playerId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -3849,7 +3844,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (DeletePlayerSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<DeletePlayerSuccessResponse>> DeletePlayerWithHttpInfoAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<DeletePlayerSuccessResponse>> DeletePlayerWithHttpInfoAsync(string appId, string playerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -3865,13 +3860,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -3951,13 +3945,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4007,7 +4000,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of DeleteSegmentSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<DeleteSegmentSuccessResponse> DeleteSegmentsAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<DeleteSegmentSuccessResponse> DeleteSegmentsAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<DeleteSegmentSuccessResponse> localVarResponse = await DeleteSegmentsWithHttpInfoAsync(appId, segmentId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -4022,7 +4015,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (DeleteSegmentSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<DeleteSegmentSuccessResponse>> DeleteSegmentsWithHttpInfoAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<DeleteSegmentSuccessResponse>> DeleteSegmentsWithHttpInfoAsync(string appId, string segmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4038,13 +4031,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4120,13 +4112,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4176,7 +4167,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    public async System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await DeleteSubscriptionWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
+    public async System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default) => await DeleteSubscriptionWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
 
     /// <summary>
     ///  Deletes the Subscription.
@@ -4187,7 +4178,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4203,13 +4194,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4293,13 +4283,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4351,7 +4340,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    public async System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await DeleteUserWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
+    public async System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default) => await DeleteUserWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
 
     /// <summary>
     ///  Removes the User identified by (:alias_label, :alias_id), and all Subscriptions and Aliases
@@ -4363,7 +4352,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4385,13 +4374,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4476,13 +4464,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4534,7 +4521,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    public async System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await EndLiveActivityWithHttpInfoAsync(appId, activityId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
+    public async System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default) => await EndLiveActivityWithHttpInfoAsync(appId, activityId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
 
     /// <summary>
     /// Stop Live Activity Stops a Live Activity
@@ -4546,7 +4533,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> EndLiveActivityWithHttpInfoAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> EndLiveActivityWithHttpInfoAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4568,13 +4555,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4655,13 +4641,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4711,7 +4696,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ExportEventsSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<ExportEventsSuccessResponse> ExportEventsAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<ExportEventsSuccessResponse> ExportEventsAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<ExportEventsSuccessResponse> localVarResponse = await ExportEventsWithHttpInfoAsync(notificationId, appId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -4726,7 +4711,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (ExportEventsSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<ExportEventsSuccessResponse>> ExportEventsWithHttpInfoAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<ExportEventsSuccessResponse>> ExportEventsWithHttpInfoAsync(string notificationId, string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'notificationId' is set
         if (notificationId == null)
@@ -4742,13 +4727,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4798,7 +4782,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="exportPlayersRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ExportPlayersSuccessResponse</returns>
-    public ExportPlayersSuccessResponse ExportPlayers(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0)
+    public ExportPlayersSuccessResponse ExportPlayers(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse> localVarResponse = ExportPlayersWithHttpInfo(appId, exportPlayersRequestBody);
         return localVarResponse.Data;
@@ -4812,7 +4796,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="exportPlayersRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of ExportPlayersSuccessResponse</returns>
-    public OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse> ExportPlayersWithHttpInfo(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse> ExportPlayersWithHttpInfo(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4822,14 +4806,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4879,7 +4863,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ExportPlayersSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<ExportPlayersSuccessResponse> ExportPlayersAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<ExportPlayersSuccessResponse> ExportPlayersAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse> localVarResponse = await ExportPlayersWithHttpInfoAsync(appId, exportPlayersRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -4894,7 +4878,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (ExportPlayersSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse>> ExportPlayersWithHttpInfoAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default(ExportPlayersRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<ExportPlayersSuccessResponse>> ExportPlayersWithHttpInfoAsync(string appId, ExportPlayersRequestBody exportPlayersRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -4904,14 +4888,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -4991,13 +4975,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5047,7 +5030,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    public async System.Threading.Tasks.Task<UserIdentityResponse> FetchAliasesAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UserIdentityResponse> FetchAliasesAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UserIdentityResponse> localVarResponse = await FetchAliasesWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5062,7 +5045,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> FetchAliasesWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> FetchAliasesWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -5078,13 +5061,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5172,13 +5154,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5230,7 +5211,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of User</returns>
-    public async System.Threading.Tasks.Task<User> FetchUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<User> FetchUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<User> localVarResponse = await FetchUserWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5246,7 +5227,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (User)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<User>> FetchUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<User>> FetchUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -5268,13 +5249,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5363,13 +5343,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5421,7 +5400,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    public async System.Threading.Tasks.Task<InlineResponse200> FetchUserIdentityAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse200> FetchUserIdentityAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse200> localVarResponse = await FetchUserIdentityWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5437,7 +5416,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> FetchUserIdentityWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> FetchUserIdentityWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -5459,13 +5438,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5538,13 +5516,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5592,7 +5569,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    public async System.Threading.Tasks.Task<App> GetAppAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<App> GetAppAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<App> localVarResponse = await GetAppWithHttpInfoAsync(appId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5606,7 +5583,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> GetAppWithHttpInfoAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> GetAppWithHttpInfoAsync(string appId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -5616,13 +5593,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5685,13 +5661,12 @@ public partial class DefaultApi : IDefaultApi
     {
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5736,7 +5711,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of List&lt;App&gt;</returns>
-    public async System.Threading.Tasks.Task<List<App>> GetAppsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<List<App>> GetAppsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<List<App>> localVarResponse = await GetAppsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5749,18 +5724,17 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (List&lt;App&gt;)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<List<App>>> GetAppsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<List<App>>> GetAppsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5837,13 +5811,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -5893,7 +5866,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse2003</returns>
-    public async System.Threading.Tasks.Task<InlineResponse2003> GetEligibleIamsAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse2003> GetEligibleIamsAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse2003> localVarResponse = await GetEligibleIamsWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -5908,7 +5881,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse2003>> GetEligibleIamsWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse2003>> GetEligibleIamsWithHttpInfoAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -5924,13 +5897,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6010,13 +5982,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6066,7 +6037,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationWithMeta</returns>
-    public async System.Threading.Tasks.Task<NotificationWithMeta> GetNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<NotificationWithMeta> GetNotificationAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<NotificationWithMeta> localVarResponse = await GetNotificationWithHttpInfoAsync(appId, notificationId, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -6081,7 +6052,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationWithMeta)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationWithMeta>> GetNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationWithMeta>> GetNotificationWithHttpInfoAsync(string appId, string notificationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6097,13 +6068,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6183,14 +6153,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6240,7 +6210,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationHistorySuccessResponse</returns>
-    public async System.Threading.Tasks.Task<NotificationHistorySuccessResponse> GetNotificationHistoryAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<NotificationHistorySuccessResponse> GetNotificationHistoryAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<NotificationHistorySuccessResponse> localVarResponse = await GetNotificationHistoryWithHttpInfoAsync(notificationId, getNotificationRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -6255,7 +6225,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationHistorySuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationHistorySuccessResponse>> GetNotificationHistoryWithHttpInfoAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationHistorySuccessResponse>> GetNotificationHistoryWithHttpInfoAsync(string notificationId, GetNotificationRequestBody getNotificationRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'notificationId' is set
         if (notificationId == null)
@@ -6271,14 +6241,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6330,7 +6300,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="kind">Kind of notifications returned:   * unset - All notification types (default)   * &#x60;0&#x60; - Dashboard only   * &#x60;1&#x60; - API only   * &#x60;3&#x60; - Automated only  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>NotificationSlice</returns>
-    public NotificationSlice GetNotifications(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0)
+    public NotificationSlice GetNotifications(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<NotificationSlice> localVarResponse = GetNotificationsWithHttpInfo(appId, limit, offset, kind);
         return localVarResponse.Data;
@@ -6346,7 +6316,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="kind">Kind of notifications returned:   * unset - All notification types (default)   * &#x60;0&#x60; - Dashboard only   * &#x60;1&#x60; - API only   * &#x60;3&#x60; - Automated only  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of NotificationSlice</returns>
-    public OneSignalApi.Client.ApiResponse<NotificationSlice> GetNotificationsWithHttpInfo(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<NotificationSlice> GetNotificationsWithHttpInfo(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6356,13 +6326,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6425,7 +6394,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of NotificationSlice</returns>
-    public async System.Threading.Tasks.Task<NotificationSlice> GetNotificationsAsync(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<NotificationSlice> GetNotificationsAsync(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<NotificationSlice> localVarResponse = await GetNotificationsWithHttpInfoAsync(appId, limit, offset, kind, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -6442,7 +6411,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (NotificationSlice)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationSlice>> GetNotificationsWithHttpInfoAsync(string appId, int? limit = default(int?), int? offset = default(int?), int? kind = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<NotificationSlice>> GetNotificationsWithHttpInfoAsync(string appId, int? limit = default, int? offset = default, int? kind = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6452,13 +6421,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6523,7 +6491,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="outcomeAttribution">Optional Attribution type for the outcomes. The values can be direct or influenced or unattributed. Example: outcome_attribution&#x3D;direct Default is total (returns direct+influenced+unattributed) if the parameter is omitted.  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>OutcomesData</returns>
-    public OutcomesData GetOutcomes(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0)
+    public OutcomesData GetOutcomes(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<OutcomesData> localVarResponse = GetOutcomesWithHttpInfo(appId, outcomeNames, outcomeNames2, outcomeTimeRange, outcomePlatforms, outcomeAttribution);
         return localVarResponse.Data;
@@ -6541,7 +6509,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="outcomeAttribution">Optional Attribution type for the outcomes. The values can be direct or influenced or unattributed. Example: outcome_attribution&#x3D;direct Default is total (returns direct+influenced+unattributed) if the parameter is omitted.  (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of OutcomesData</returns>
-    public OneSignalApi.Client.ApiResponse<OutcomesData> GetOutcomesWithHttpInfo(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<OutcomesData> GetOutcomesWithHttpInfo(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6557,13 +6525,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6633,7 +6600,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of OutcomesData</returns>
-    public async System.Threading.Tasks.Task<OutcomesData> GetOutcomesAsync(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OutcomesData> GetOutcomesAsync(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<OutcomesData> localVarResponse = await GetOutcomesWithHttpInfoAsync(appId, outcomeNames, outcomeNames2, outcomeTimeRange, outcomePlatforms, outcomeAttribution, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -6652,7 +6619,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (OutcomesData)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<OutcomesData>> GetOutcomesWithHttpInfoAsync(string appId, string outcomeNames, string outcomeNames2 = default(string), string outcomeTimeRange = default(string), string outcomePlatforms = default(string), string outcomeAttribution = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<OutcomesData>> GetOutcomesWithHttpInfoAsync(string appId, string outcomeNames, string outcomeNames2 = default, string outcomeTimeRange = default, string outcomePlatforms = default, string outcomeAttribution = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6668,13 +6635,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6741,7 +6707,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="emailAuthHash">Email - Only required if you have enabled Identity Verification and device_type is email (11). (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>Player</returns>
-    public Player GetPlayer(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0)
+    public Player GetPlayer(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<Player> localVarResponse = GetPlayerWithHttpInfo(appId, playerId, emailAuthHash);
         return localVarResponse.Data;
@@ -6756,7 +6722,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="emailAuthHash">Email - Only required if you have enabled Identity Verification and device_type is email (11). (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of Player</returns>
-    public OneSignalApi.Client.ApiResponse<Player> GetPlayerWithHttpInfo(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<Player> GetPlayerWithHttpInfo(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6772,13 +6738,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6833,7 +6798,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of Player</returns>
-    public async System.Threading.Tasks.Task<Player> GetPlayerAsync(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<Player> GetPlayerAsync(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<Player> localVarResponse = await GetPlayerWithHttpInfoAsync(appId, playerId, emailAuthHash, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -6849,7 +6814,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (Player)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Player>> GetPlayerWithHttpInfoAsync(string appId, string playerId, string emailAuthHash = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Player>> GetPlayerWithHttpInfoAsync(string appId, string playerId, string emailAuthHash = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6865,13 +6830,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -6926,7 +6890,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="offset">Result offset. Default is 0. Results are sorted by id; (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>PlayerSlice</returns>
-    public PlayerSlice GetPlayers(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+    public PlayerSlice GetPlayers(string appId, int? limit = default, int? offset = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<PlayerSlice> localVarResponse = GetPlayersWithHttpInfo(appId, limit, offset);
         return localVarResponse.Data;
@@ -6941,7 +6905,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="offset">Result offset. Default is 0. Results are sorted by id; (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of PlayerSlice</returns>
-    public OneSignalApi.Client.ApiResponse<PlayerSlice> GetPlayersWithHttpInfo(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<PlayerSlice> GetPlayersWithHttpInfo(string appId, int? limit = default, int? offset = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -6951,13 +6915,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7015,7 +6978,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of PlayerSlice</returns>
-    public async System.Threading.Tasks.Task<PlayerSlice> GetPlayersAsync(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<PlayerSlice> GetPlayersAsync(string appId, int? limit = default, int? offset = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<PlayerSlice> localVarResponse = await GetPlayersWithHttpInfoAsync(appId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7031,7 +6994,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (PlayerSlice)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<PlayerSlice>> GetPlayersWithHttpInfoAsync(string appId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<PlayerSlice>> GetPlayersWithHttpInfoAsync(string appId, int? limit = default, int? offset = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -7041,13 +7004,12 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
-        };
+        string[] _contentTypes = [];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7150,14 +7112,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7211,7 +7173,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse200</returns>
-    public async System.Threading.Tasks.Task<InlineResponse200> IdentifyUserByAliasAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse200> IdentifyUserByAliasAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse200> localVarResponse = await IdentifyUserByAliasWithHttpInfoAsync(appId, aliasLabel, aliasId, userIdentityRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7228,7 +7190,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> IdentifyUserByAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse200>> IdentifyUserByAliasWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -7256,14 +7218,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7353,14 +7315,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7412,7 +7374,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    public async System.Threading.Tasks.Task<UserIdentityResponse> IdentifyUserBySubscriptionIdAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UserIdentityResponse> IdentifyUserBySubscriptionIdAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UserIdentityResponse> localVarResponse = await IdentifyUserBySubscriptionIdWithHttpInfoAsync(appId, subscriptionId, userIdentityRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7428,7 +7390,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> IdentifyUserBySubscriptionIdWithHttpInfoAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> IdentifyUserBySubscriptionIdWithHttpInfoAsync(string appId, string subscriptionId, UserIdentityRequestBody userIdentityRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -7450,14 +7412,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7546,14 +7508,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7605,7 +7567,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UserIdentityResponse</returns>
-    public async System.Threading.Tasks.Task<UserIdentityResponse> TransferSubscriptionAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UserIdentityResponse> TransferSubscriptionAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UserIdentityResponse> localVarResponse = await TransferSubscriptionWithHttpInfoAsync(appId, subscriptionId, transferSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7621,7 +7583,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UserIdentityResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> TransferSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UserIdentityResponse>> TransferSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, TransferSubscriptionRequestBody transferSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -7643,14 +7605,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7731,14 +7693,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7788,7 +7750,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of App</returns>
-    public async System.Threading.Tasks.Task<App> UpdateAppAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<App> UpdateAppAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<App> localVarResponse = await UpdateAppWithHttpInfoAsync(appId, app, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7803,7 +7765,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (App)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> UpdateAppWithHttpInfoAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<App>> UpdateAppWithHttpInfoAsync(string appId, App app, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -7819,14 +7781,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7914,14 +7876,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -7973,7 +7935,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdateLiveActivitySuccessResponse</returns>
-    public async System.Threading.Tasks.Task<UpdateLiveActivitySuccessResponse> UpdateLiveActivityAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UpdateLiveActivitySuccessResponse> UpdateLiveActivityAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UpdateLiveActivitySuccessResponse> localVarResponse = await UpdateLiveActivityWithHttpInfoAsync(appId, activityId, updateLiveActivityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -7989,7 +7951,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdateLiveActivitySuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdateLiveActivitySuccessResponse>> UpdateLiveActivityWithHttpInfoAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdateLiveActivitySuccessResponse>> UpdateLiveActivityWithHttpInfoAsync(string appId, string activityId, UpdateLiveActivityRequest updateLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -8011,14 +7973,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8099,14 +8061,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8156,7 +8118,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdatePlayerSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<UpdatePlayerSuccessResponse> UpdatePlayerAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UpdatePlayerSuccessResponse> UpdatePlayerAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UpdatePlayerSuccessResponse> localVarResponse = await UpdatePlayerWithHttpInfoAsync(playerId, player, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -8171,7 +8133,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdatePlayerSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdatePlayerSuccessResponse>> UpdatePlayerWithHttpInfoAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdatePlayerSuccessResponse>> UpdatePlayerWithHttpInfoAsync(string playerId, Player player, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'playerId' is set
         if (playerId == null)
@@ -8187,14 +8149,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8245,7 +8207,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="updatePlayerTagsRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>UpdatePlayerTagsSuccessResponse</returns>
-    public UpdatePlayerTagsSuccessResponse UpdatePlayerTags(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0)
+    public UpdatePlayerTagsSuccessResponse UpdatePlayerTags(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0)
     {
         OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse> localVarResponse = UpdatePlayerTagsWithHttpInfo(appId, externalUserId, updatePlayerTagsRequestBody);
         return localVarResponse.Data;
@@ -8260,7 +8222,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="updatePlayerTagsRequestBody"> (optional)</param>
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <returns>ApiResponse of UpdatePlayerTagsSuccessResponse</returns>
-    public OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsWithHttpInfo(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0)
+    public OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsWithHttpInfo(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -8276,14 +8238,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8335,7 +8297,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of UpdatePlayerTagsSuccessResponse</returns>
-    public async System.Threading.Tasks.Task<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<UpdatePlayerTagsSuccessResponse> UpdatePlayerTagsAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse> localVarResponse = await UpdatePlayerTagsWithHttpInfoAsync(appId, externalUserId, updatePlayerTagsRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -8351,7 +8313,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (UpdatePlayerTagsSuccessResponse)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse>> UpdatePlayerTagsWithHttpInfoAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default(UpdatePlayerTagsRequestBody), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<UpdatePlayerTagsSuccessResponse>> UpdatePlayerTagsWithHttpInfoAsync(string appId, string externalUserId, UpdatePlayerTagsRequestBody updatePlayerTagsRequestBody = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -8367,14 +8329,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8459,14 +8421,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8518,7 +8480,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of void</returns>
-    public async System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await UpdateSubscriptionWithHttpInfoAsync(appId, subscriptionId, updateSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
+    public async System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default) => await UpdateSubscriptionWithHttpInfoAsync(appId, subscriptionId, updateSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
 
     /// <summary>
     ///  Updates an existing Subscription’s properties.
@@ -8530,7 +8492,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> UpdateSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<Object>> UpdateSubscriptionWithHttpInfoAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -8552,14 +8514,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8656,14 +8618,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)
@@ -8717,7 +8679,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of InlineResponse202</returns>
-    public async System.Threading.Tasks.Task<InlineResponse202> UpdateUserAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<InlineResponse202> UpdateUserAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         OneSignalApi.Client.ApiResponse<InlineResponse202> localVarResponse = await UpdateUserWithHttpInfoAsync(appId, aliasLabel, aliasId, updateUserRequest, operationIndex, cancellationToken).ConfigureAwait(false);
         return localVarResponse.Data;
@@ -8734,7 +8696,7 @@ public partial class DefaultApi : IDefaultApi
     /// <param name="operationIndex">Index associated with the operation.</param>
     /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
     /// <returns>Task of ApiResponse (InlineResponse202)</returns>
-    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse202>> UpdateUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public async System.Threading.Tasks.Task<OneSignalApi.Client.ApiResponse<InlineResponse202>> UpdateUserWithHttpInfoAsync(string appId, string aliasLabel, string aliasId, UpdateUserRequest updateUserRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
     {
         // verify the required parameter 'appId' is set
         if (appId == null)
@@ -8762,14 +8724,14 @@ public partial class DefaultApi : IDefaultApi
 
         OneSignalApi.Client.RequestOptions localVarRequestOptions = new OneSignalApi.Client.RequestOptions();
 
-        string[] _contentTypes = new string[] {
+        string[] _contentTypes = [
             "application/json"
-        };
+        ];
 
         // to determine the Accept header
-        string[] _accepts = new string[] {
+        string[] _accepts = [
             "application/json"
-        };
+        ];
 
         var localVarContentType = OneSignalApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
         if (localVarContentType != null)

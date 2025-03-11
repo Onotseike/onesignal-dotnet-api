@@ -107,7 +107,7 @@ public partial class UpdateLiveActivityRequest : IEquatable<UpdateLiveActivityRe
     /// <param name="_event">_event (required).</param>
     /// <param name="eventUpdates">eventUpdates (required).</param>
     /// <param name="dismissAt">Timestamp; only allowed if event is \&quot;end\&quot;.</param>
-    public UpdateLiveActivityRequest(NameEnum name = default(NameEnum), EventEnum _event = default(EventEnum), Object eventUpdates = default(Object), decimal dismissAt = default(decimal))
+    public UpdateLiveActivityRequest(NameEnum name = default, EventEnum _event = default, Object eventUpdates = default, decimal dismissAt = default)
     {
         this.Name = name;
         this.Event = _event;
@@ -140,12 +140,12 @@ public partial class UpdateLiveActivityRequest : IEquatable<UpdateLiveActivityRe
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdateLiveActivityRequest {\n");
-        sb.Append("  Name: ").Append(Name).Append("\n");
-        sb.Append("  Event: ").Append(Event).Append("\n");
-        sb.Append("  EventUpdates: ").Append(EventUpdates).Append("\n");
-        sb.Append("  DismissAt: ").Append(DismissAt).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdateLiveActivityRequest {\n");
+        _ = sb.Append("  Name: ").Append(Name).Append("\n");
+        _ = sb.Append("  Event: ").Append(Event).Append("\n");
+        _ = sb.Append("  EventUpdates: ").Append(EventUpdates).Append("\n");
+        _ = sb.Append("  DismissAt: ").Append(DismissAt).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -35,7 +35,7 @@ public partial class UserIdentityResponse : IEquatable<UserIdentityResponse>, IV
     /// Initializes a new instance of the <see cref="UserIdentityResponse" /> class.
     /// </summary>
     /// <param name="identity">identity.</param>
-    public UserIdentityResponse(Dictionary<string, Object> identity = default(Dictionary<string, Object>)) => this.Identity = identity;
+    public UserIdentityResponse(Dictionary<string, Object> identity = default) => this.Identity = identity;
 
     /// <summary>
     /// Gets or Sets Identity
@@ -50,9 +50,9 @@ public partial class UserIdentityResponse : IEquatable<UserIdentityResponse>, IV
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UserIdentityResponse {\n");
-        sb.Append("  Identity: ").Append(Identity).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UserIdentityResponse {\n");
+        _ = sb.Append("  Identity: ").Append(Identity).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

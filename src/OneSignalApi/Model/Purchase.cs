@@ -43,7 +43,7 @@ public partial class Purchase : IEquatable<Purchase>, IValidatableObject
     /// <param name="amount">The amount, in USD, spent purchasing the item. (required).</param>
     /// <param name="iso">The 3-letter ISO 4217 currency code. Required for correct storage and conversion of amount. (required).</param>
     /// <param name="count">count.</param>
-    public Purchase(string sku = default(string), string amount = default(string), string iso = default(string), decimal count = default(decimal))
+    public Purchase(string sku = default, string amount = default, string iso = default, decimal count = default)
     {
         // to ensure "sku" is required (not null)
         if (sku == null)
@@ -100,12 +100,12 @@ public partial class Purchase : IEquatable<Purchase>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Purchase {\n");
-        sb.Append("  Sku: ").Append(Sku).Append("\n");
-        sb.Append("  Amount: ").Append(Amount).Append("\n");
-        sb.Append("  Iso: ").Append(Iso).Append("\n");
-        sb.Append("  Count: ").Append(Count).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Purchase {\n");
+        _ = sb.Append("  Sku: ").Append(Sku).Append("\n");
+        _ = sb.Append("  Amount: ").Append(Amount).Append("\n");
+        _ = sb.Append("  Iso: ").Append(Iso).Append("\n");
+        _ = sb.Append("  Count: ").Append(Count).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

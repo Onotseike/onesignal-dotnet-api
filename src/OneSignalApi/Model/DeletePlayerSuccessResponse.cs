@@ -35,7 +35,7 @@ public partial class DeletePlayerSuccessResponse : IEquatable<DeletePlayerSucces
     /// Initializes a new instance of the <see cref="DeletePlayerSuccessResponse" /> class.
     /// </summary>
     /// <param name="success">success.</param>
-    public DeletePlayerSuccessResponse(bool success = default(bool)) => this.Success = success;
+    public DeletePlayerSuccessResponse(bool success = default) => this.Success = success;
 
     /// <summary>
     /// Gets or Sets Success
@@ -50,9 +50,9 @@ public partial class DeletePlayerSuccessResponse : IEquatable<DeletePlayerSucces
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class DeletePlayerSuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class DeletePlayerSuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

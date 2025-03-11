@@ -35,7 +35,7 @@ public partial class PlayerNotificationTargetIncludeAliases : IEquatable<PlayerN
     /// Initializes a new instance of the <see cref="PlayerNotificationTargetIncludeAliases" /> class.
     /// </summary>
     /// <param name="aliasLabel">aliasLabel.</param>
-    public PlayerNotificationTargetIncludeAliases(List<string> aliasLabel = default(List<string>)) => this.AliasLabel = aliasLabel;
+    public PlayerNotificationTargetIncludeAliases(List<string> aliasLabel = default) => this.AliasLabel = aliasLabel;
 
     /// <summary>
     /// Gets or Sets AliasLabel
@@ -50,9 +50,9 @@ public partial class PlayerNotificationTargetIncludeAliases : IEquatable<PlayerN
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlayerNotificationTargetIncludeAliases {\n");
-        sb.Append("  AliasLabel: ").Append(AliasLabel).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlayerNotificationTargetIncludeAliases {\n");
+        _ = sb.Append("  AliasLabel: ").Append(AliasLabel).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

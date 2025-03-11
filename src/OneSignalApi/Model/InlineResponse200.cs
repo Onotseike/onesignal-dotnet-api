@@ -35,7 +35,7 @@ public partial class InlineResponse200 : IEquatable<InlineResponse200>, IValidat
     /// Initializes a new instance of the <see cref="InlineResponse200" /> class.
     /// </summary>
     /// <param name="identity">identity.</param>
-    public InlineResponse200(Dictionary<string, Object> identity = default(Dictionary<string, Object>)) => this.Identity = identity;
+    public InlineResponse200(Dictionary<string, Object> identity = default) => this.Identity = identity;
 
     /// <summary>
     /// Gets or Sets Identity
@@ -50,9 +50,9 @@ public partial class InlineResponse200 : IEquatable<InlineResponse200>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class InlineResponse200 {\n");
-        sb.Append("  Identity: ").Append(Identity).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class InlineResponse200 {\n");
+        _ = sb.Append("  Identity: ").Append(Identity).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

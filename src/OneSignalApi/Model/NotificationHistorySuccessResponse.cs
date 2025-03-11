@@ -36,7 +36,7 @@ public partial class NotificationHistorySuccessResponse : IEquatable<Notificatio
     /// </summary>
     /// <param name="success">success.</param>
     /// <param name="destinationUrl">destinationUrl.</param>
-    public NotificationHistorySuccessResponse(bool success = default(bool), string destinationUrl = default(string))
+    public NotificationHistorySuccessResponse(bool success = default, string destinationUrl = default)
     {
         this.Success = success;
         this.DestinationUrl = destinationUrl;
@@ -61,10 +61,10 @@ public partial class NotificationHistorySuccessResponse : IEquatable<Notificatio
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class NotificationHistorySuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("  DestinationUrl: ").Append(DestinationUrl).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class NotificationHistorySuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("  DestinationUrl: ").Append(DestinationUrl).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

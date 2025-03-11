@@ -45,7 +45,7 @@ public partial class PropertiesObject : IEquatable<PropertiesObject>, IValidatab
     /// <param name="amountSpent">amountSpent.</param>
     /// <param name="purchases">purchases.</param>
     /// <param name="ip">ip.</param>
-    public PropertiesObject(Dictionary<string, Object> tags = default(Dictionary<string, Object>), string language = default(string), string timezoneId = default(string), decimal lat = default(decimal), decimal _long = default(decimal), string country = default(string), decimal firstActive = default(decimal), decimal lastActive = default(decimal), decimal amountSpent = default(decimal), List<Purchase> purchases = default(List<Purchase>), string ip = default(string))
+    public PropertiesObject(Dictionary<string, Object> tags = default, string language = default, string timezoneId = default, decimal lat = default, decimal _long = default, string country = default, int firstActive = default, int lastActive = default, decimal amountSpent = default, List<Purchase> purchases = default, string ip = default)
     {
         this.Tags = tags;
         this.Language = language;
@@ -100,13 +100,13 @@ public partial class PropertiesObject : IEquatable<PropertiesObject>, IValidatab
     /// Gets or Sets FirstActive
     /// </summary>
     [DataMember(Name = "first_active", EmitDefaultValue = false)]
-    public decimal FirstActive { get; set; }
+    public int FirstActive { get; set; }
 
     /// <summary>
     /// Gets or Sets LastActive
     /// </summary>
     [DataMember(Name = "last_active", EmitDefaultValue = false)]
-    public decimal LastActive { get; set; }
+    public int LastActive { get; set; }
 
     /// <summary>
     /// Gets or Sets AmountSpent
@@ -133,19 +133,19 @@ public partial class PropertiesObject : IEquatable<PropertiesObject>, IValidatab
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PropertiesObject {\n");
-        sb.Append("  Tags: ").Append(Tags).Append("\n");
-        sb.Append("  Language: ").Append(Language).Append("\n");
-        sb.Append("  TimezoneId: ").Append(TimezoneId).Append("\n");
-        sb.Append("  Lat: ").Append(Lat).Append("\n");
-        sb.Append("  Long: ").Append(Long).Append("\n");
-        sb.Append("  Country: ").Append(Country).Append("\n");
-        sb.Append("  FirstActive: ").Append(FirstActive).Append("\n");
-        sb.Append("  LastActive: ").Append(LastActive).Append("\n");
-        sb.Append("  AmountSpent: ").Append(AmountSpent).Append("\n");
-        sb.Append("  Purchases: ").Append(Purchases).Append("\n");
-        sb.Append("  Ip: ").Append(Ip).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PropertiesObject {\n");
+        _ = sb.Append("  Tags: ").Append(Tags).Append("\n");
+        _ = sb.Append("  Language: ").Append(Language).Append("\n");
+        _ = sb.Append("  TimezoneId: ").Append(TimezoneId).Append("\n");
+        _ = sb.Append("  Lat: ").Append(Lat).Append("\n");
+        _ = sb.Append("  Long: ").Append(Long).Append("\n");
+        _ = sb.Append("  Country: ").Append(Country).Append("\n");
+        _ = sb.Append("  FirstActive: ").Append(FirstActive).Append("\n");
+        _ = sb.Append("  LastActive: ").Append(LastActive).Append("\n");
+        _ = sb.Append("  AmountSpent: ").Append(AmountSpent).Append("\n");
+        _ = sb.Append("  Purchases: ").Append(Purchases).Append("\n");
+        _ = sb.Append("  Ip: ").Append(Ip).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

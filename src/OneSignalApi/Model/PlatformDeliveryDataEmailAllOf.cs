@@ -41,7 +41,7 @@ public partial class PlatformDeliveryDataEmailAllOf : IEquatable<PlatformDeliver
     /// <param name="bounced">Number of recipients who registered as a hard or soft bounce and didn&#39;t receive your email..</param>
     /// <param name="reportedSpam">Number of recipients who reported this email as spam..</param>
     /// <param name="unsubscribed">Number of recipients who opted out of your emails using the unsubscribe link in this email..</param>
-    public PlatformDeliveryDataEmailAllOf(int? opened = default(int?), int? uniqueOpens = default(int?), int? clicks = default(int?), int? uniqueClicks = default(int?), int? bounced = default(int?), int? reportedSpam = default(int?), int? unsubscribed = default(int?))
+    public PlatformDeliveryDataEmailAllOf(int? opened = default, int? uniqueOpens = default, int? clicks = default, int? uniqueClicks = default, int? bounced = default, int? reportedSpam = default, int? unsubscribed = default)
     {
         this.Opened = opened;
         this.UniqueOpens = uniqueOpens;
@@ -108,15 +108,15 @@ public partial class PlatformDeliveryDataEmailAllOf : IEquatable<PlatformDeliver
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlatformDeliveryDataEmailAllOf {\n");
-        sb.Append("  Opened: ").Append(Opened).Append("\n");
-        sb.Append("  UniqueOpens: ").Append(UniqueOpens).Append("\n");
-        sb.Append("  Clicks: ").Append(Clicks).Append("\n");
-        sb.Append("  UniqueClicks: ").Append(UniqueClicks).Append("\n");
-        sb.Append("  Bounced: ").Append(Bounced).Append("\n");
-        sb.Append("  ReportedSpam: ").Append(ReportedSpam).Append("\n");
-        sb.Append("  Unsubscribed: ").Append(Unsubscribed).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlatformDeliveryDataEmailAllOf {\n");
+        _ = sb.Append("  Opened: ").Append(Opened).Append("\n");
+        _ = sb.Append("  UniqueOpens: ").Append(UniqueOpens).Append("\n");
+        _ = sb.Append("  Clicks: ").Append(Clicks).Append("\n");
+        _ = sb.Append("  UniqueClicks: ").Append(UniqueClicks).Append("\n");
+        _ = sb.Append("  Bounced: ").Append(Bounced).Append("\n");
+        _ = sb.Append("  ReportedSpam: ").Append(ReportedSpam).Append("\n");
+        _ = sb.Append("  Unsubscribed: ").Append(Unsubscribed).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -39,7 +39,7 @@ public partial class DeliveryData : IEquatable<DeliveryData>, IValidatableObject
     /// <param name="errored">Number of errors reported..</param>
     /// <param name="converted">Number of messages that were clicked..</param>
     /// <param name="received">Number of devices that received the message..</param>
-    public DeliveryData(int? successful = default(int?), int? failed = default(int?), int? errored = default(int?), int? converted = default(int?), int? received = default(int?))
+    public DeliveryData(int? successful = default, int? failed = default, int? errored = default, int? converted = default, int? received = default)
     {
         this.Successful = successful;
         this.Failed = failed;
@@ -90,13 +90,13 @@ public partial class DeliveryData : IEquatable<DeliveryData>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class DeliveryData {\n");
-        sb.Append("  Successful: ").Append(Successful).Append("\n");
-        sb.Append("  Failed: ").Append(Failed).Append("\n");
-        sb.Append("  Errored: ").Append(Errored).Append("\n");
-        sb.Append("  Converted: ").Append(Converted).Append("\n");
-        sb.Append("  Received: ").Append(Received).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class DeliveryData {\n");
+        _ = sb.Append("  Successful: ").Append(Successful).Append("\n");
+        _ = sb.Append("  Failed: ").Append(Failed).Append("\n");
+        _ = sb.Append("  Errored: ").Append(Errored).Append("\n");
+        _ = sb.Append("  Converted: ").Append(Converted).Append("\n");
+        _ = sb.Append("  Received: ").Append(Received).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

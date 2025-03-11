@@ -35,7 +35,7 @@ public partial class NotificationAllOf : IEquatable<NotificationAllOf>, IValidat
     /// Initializes a new instance of the <see cref="NotificationAllOf" /> class.
     /// </summary>
     /// <param name="sendAfter">Channel: All Schedule notification for future delivery. API defaults to UTC -1100 Examples: All examples are the exact same date &amp; time. \&quot;Thu Sep 24 2015 14:00:00 GMT-0700 (PDT)\&quot; \&quot;September 24th 2015, 2:00:00 pm UTC-07:00\&quot; \&quot;2015-09-24 14:00:00 GMT-0700\&quot; \&quot;Sept 24 2015 14:00:00 GMT-0700\&quot; \&quot;Thu Sep 24 2015 14:00:00 GMT-0700 (Pacific Daylight Time)\&quot; Note: SMS currently only supports send_after parameter. .</param>
-    public NotificationAllOf(DateTime? sendAfter = default(DateTime?)) => this.SendAfter = sendAfter;
+    public NotificationAllOf(DateTime? sendAfter = default) => this.SendAfter = sendAfter;
 
     /// <summary>
     /// Channel: All Schedule notification for future delivery. API defaults to UTC -1100 Examples: All examples are the exact same date &amp; time. \&quot;Thu Sep 24 2015 14:00:00 GMT-0700 (PDT)\&quot; \&quot;September 24th 2015, 2:00:00 pm UTC-07:00\&quot; \&quot;2015-09-24 14:00:00 GMT-0700\&quot; \&quot;Sept 24 2015 14:00:00 GMT-0700\&quot; \&quot;Thu Sep 24 2015 14:00:00 GMT-0700 (Pacific Daylight Time)\&quot; Note: SMS currently only supports send_after parameter. 
@@ -51,9 +51,9 @@ public partial class NotificationAllOf : IEquatable<NotificationAllOf>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class NotificationAllOf {\n");
-        sb.Append("  SendAfter: ").Append(SendAfter).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class NotificationAllOf {\n");
+        _ = sb.Append("  SendAfter: ").Append(SendAfter).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

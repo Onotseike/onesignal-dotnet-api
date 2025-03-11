@@ -35,7 +35,7 @@ public partial class CancelNotificationSuccessResponse : IEquatable<CancelNotifi
     /// Initializes a new instance of the <see cref="CancelNotificationSuccessResponse" /> class.
     /// </summary>
     /// <param name="success">success.</param>
-    public CancelNotificationSuccessResponse(bool success = default(bool)) => this.Success = success;
+    public CancelNotificationSuccessResponse(bool success = default) => this.Success = success;
 
     /// <summary>
     /// Gets or Sets Success
@@ -50,9 +50,9 @@ public partial class CancelNotificationSuccessResponse : IEquatable<CancelNotifi
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CancelNotificationSuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CancelNotificationSuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

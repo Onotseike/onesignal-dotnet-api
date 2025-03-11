@@ -38,7 +38,7 @@ public partial class PlayerSlice : IEquatable<PlayerSlice>, IValidatableObject
     /// <param name="offset">offset.</param>
     /// <param name="limit">limit.</param>
     /// <param name="players">players.</param>
-    public PlayerSlice(int totalCount = default(int), int offset = default(int), int limit = default(int), List<Player> players = default(List<Player>))
+    public PlayerSlice(int totalCount = default, int offset = default, int limit = default, List<Player> players = default)
     {
         this.TotalCount = totalCount;
         this.Offset = offset;
@@ -77,12 +77,12 @@ public partial class PlayerSlice : IEquatable<PlayerSlice>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlayerSlice {\n");
-        sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-        sb.Append("  Offset: ").Append(Offset).Append("\n");
-        sb.Append("  Limit: ").Append(Limit).Append("\n");
-        sb.Append("  Players: ").Append(Players).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlayerSlice {\n");
+        _ = sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
+        _ = sb.Append("  Offset: ").Append(Offset).Append("\n");
+        _ = sb.Append("  Limit: ").Append(Limit).Append("\n");
+        _ = sb.Append("  Players: ").Append(Players).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -35,7 +35,7 @@ public partial class ExportPlayersSuccessResponse : IEquatable<ExportPlayersSucc
     /// Initializes a new instance of the <see cref="ExportPlayersSuccessResponse" /> class.
     /// </summary>
     /// <param name="csvFileUrl">csvFileUrl.</param>
-    public ExportPlayersSuccessResponse(string csvFileUrl = default(string)) => this.CsvFileUrl = csvFileUrl;
+    public ExportPlayersSuccessResponse(string csvFileUrl = default) => this.CsvFileUrl = csvFileUrl;
 
     /// <summary>
     /// Gets or Sets CsvFileUrl
@@ -50,9 +50,9 @@ public partial class ExportPlayersSuccessResponse : IEquatable<ExportPlayersSucc
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class ExportPlayersSuccessResponse {\n");
-        sb.Append("  CsvFileUrl: ").Append(CsvFileUrl).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class ExportPlayersSuccessResponse {\n");
+        _ = sb.Append("  CsvFileUrl: ").Append(CsvFileUrl).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

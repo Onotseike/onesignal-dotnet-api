@@ -36,7 +36,7 @@ public partial class InvalidIdentifierError : IEquatable<InvalidIdentifierError>
     /// </summary>
     /// <param name="invalidExternalUserIds">Returned if using include_external_user_ids.</param>
     /// <param name="invalidPlayerIds">Returned if using include_player_ids and some were valid and others were not..</param>
-    public InvalidIdentifierError(List<string> invalidExternalUserIds = default(List<string>), List<string> invalidPlayerIds = default(List<string>))
+    public InvalidIdentifierError(List<string> invalidExternalUserIds = default, List<string> invalidPlayerIds = default)
     {
         this.InvalidExternalUserIds = invalidExternalUserIds;
         this.InvalidPlayerIds = invalidPlayerIds;
@@ -63,10 +63,10 @@ public partial class InvalidIdentifierError : IEquatable<InvalidIdentifierError>
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class InvalidIdentifierError {\n");
-        sb.Append("  InvalidExternalUserIds: ").Append(InvalidExternalUserIds).Append("\n");
-        sb.Append("  InvalidPlayerIds: ").Append(InvalidPlayerIds).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class InvalidIdentifierError {\n");
+        _ = sb.Append("  InvalidExternalUserIds: ").Append(InvalidExternalUserIds).Append("\n");
+        _ = sb.Append("  InvalidPlayerIds: ").Append(InvalidPlayerIds).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

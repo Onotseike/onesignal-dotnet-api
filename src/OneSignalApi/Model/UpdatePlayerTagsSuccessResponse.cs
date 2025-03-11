@@ -35,7 +35,7 @@ public partial class UpdatePlayerTagsSuccessResponse : IEquatable<UpdatePlayerTa
     /// Initializes a new instance of the <see cref="UpdatePlayerTagsSuccessResponse" /> class.
     /// </summary>
     /// <param name="success">success.</param>
-    public UpdatePlayerTagsSuccessResponse(bool success = default(bool)) => this.Success = success;
+    public UpdatePlayerTagsSuccessResponse(bool success = default) => this.Success = success;
 
     /// <summary>
     /// Gets or Sets Success
@@ -50,9 +50,9 @@ public partial class UpdatePlayerTagsSuccessResponse : IEquatable<UpdatePlayerTa
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdatePlayerTagsSuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdatePlayerTagsSuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

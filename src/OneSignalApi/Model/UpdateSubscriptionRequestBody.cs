@@ -35,7 +35,7 @@ public partial class UpdateSubscriptionRequestBody : IEquatable<UpdateSubscripti
     /// Initializes a new instance of the <see cref="UpdateSubscriptionRequestBody" /> class.
     /// </summary>
     /// <param name="subscription">subscription.</param>
-    public UpdateSubscriptionRequestBody(SubscriptionObject subscription = default(SubscriptionObject)) => this.Subscription = subscription;
+    public UpdateSubscriptionRequestBody(SubscriptionObject subscription = default) => this.Subscription = subscription;
 
     /// <summary>
     /// Gets or Sets Subscription
@@ -50,9 +50,9 @@ public partial class UpdateSubscriptionRequestBody : IEquatable<UpdateSubscripti
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdateSubscriptionRequestBody {\n");
-        sb.Append("  Subscription: ").Append(Subscription).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdateSubscriptionRequestBody {\n");
+        _ = sb.Append("  Subscription: ").Append(Subscription).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

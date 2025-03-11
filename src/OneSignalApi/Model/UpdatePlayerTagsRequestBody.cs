@@ -35,7 +35,7 @@ public partial class UpdatePlayerTagsRequestBody : IEquatable<UpdatePlayerTagsRe
     /// Initializes a new instance of the <see cref="UpdatePlayerTagsRequestBody" /> class.
     /// </summary>
     /// <param name="tags">Custom tags for the device record.  Only support string key value pairs.  Does not support arrays or other nested objects.  Example &#x60;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;this\&quot;:\&quot;that\&quot;}&#x60;. Limitations: - 100 tags per call - Android SDK users: tags cannot be removed or changed via API if set through SDK sendTag methods. Recommended to only tag devices with 1 kilobyte of ata Please consider using your own Database to save more than 1 kilobyte of data.  See: Internal Database &amp; CRM .</param>
-    public UpdatePlayerTagsRequestBody(Object tags = default(Object)) => this.Tags = tags;
+    public UpdatePlayerTagsRequestBody(Object tags = default) => this.Tags = tags;
 
     /// <summary>
     /// Custom tags for the device record.  Only support string key value pairs.  Does not support arrays or other nested objects.  Example &#x60;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;this\&quot;:\&quot;that\&quot;}&#x60;. Limitations: - 100 tags per call - Android SDK users: tags cannot be removed or changed via API if set through SDK sendTag methods. Recommended to only tag devices with 1 kilobyte of ata Please consider using your own Database to save more than 1 kilobyte of data.  See: Internal Database &amp; CRM 
@@ -51,9 +51,9 @@ public partial class UpdatePlayerTagsRequestBody : IEquatable<UpdatePlayerTagsRe
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdatePlayerTagsRequestBody {\n");
-        sb.Append("  Tags: ").Append(Tags).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdatePlayerTagsRequestBody {\n");
+        _ = sb.Append("  Tags: ").Append(Tags).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

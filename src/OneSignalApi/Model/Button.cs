@@ -42,7 +42,7 @@ public partial class Button : IEquatable<Button>, IValidatableObject
     /// <param name="id">id (required).</param>
     /// <param name="text">text.</param>
     /// <param name="icon">icon.</param>
-    public Button(string id = default(string), string text = default(string), string icon = default(string))
+    public Button(string id = default, string text = default, string icon = default)
     {
         // to ensure "id" is required (not null)
         if (id == null)
@@ -79,11 +79,11 @@ public partial class Button : IEquatable<Button>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Button {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Text: ").Append(Text).Append("\n");
-        sb.Append("  Icon: ").Append(Icon).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Button {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Text: ").Append(Text).Append("\n");
+        _ = sb.Append("  Icon: ").Append(Icon).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

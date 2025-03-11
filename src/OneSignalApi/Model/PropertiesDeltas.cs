@@ -37,7 +37,7 @@ public partial class PropertiesDeltas : IEquatable<PropertiesDeltas>, IValidatab
     /// <param name="sessionTime">sessionTime.</param>
     /// <param name="sessionCount">sessionCount.</param>
     /// <param name="purchases">purchases.</param>
-    public PropertiesDeltas(decimal sessionTime = default(decimal), decimal sessionCount = default(decimal), List<Purchase> purchases = default(List<Purchase>))
+    public PropertiesDeltas(decimal sessionTime = default, decimal sessionCount = default, List<Purchase> purchases = default)
     {
         this.SessionTime = sessionTime;
         this.SessionCount = sessionCount;
@@ -69,11 +69,11 @@ public partial class PropertiesDeltas : IEquatable<PropertiesDeltas>, IValidatab
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PropertiesDeltas {\n");
-        sb.Append("  SessionTime: ").Append(SessionTime).Append("\n");
-        sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
-        sb.Append("  Purchases: ").Append(Purchases).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PropertiesDeltas {\n");
+        _ = sb.Append("  SessionTime: ").Append(SessionTime).Append("\n");
+        _ = sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
+        _ = sb.Append("  Purchases: ").Append(Purchases).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

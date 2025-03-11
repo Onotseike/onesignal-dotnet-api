@@ -35,7 +35,7 @@ public partial class InlineResponse2003 : IEquatable<InlineResponse2003>, IValid
     /// Initializes a new instance of the <see cref="InlineResponse2003" /> class.
     /// </summary>
     /// <param name="inAppMessages">inAppMessages.</param>
-    public InlineResponse2003(List<Object> inAppMessages = default(List<Object>)) => this.InAppMessages = inAppMessages;
+    public InlineResponse2003(List<Object> inAppMessages = default) => this.InAppMessages = inAppMessages;
 
     /// <summary>
     /// Gets or Sets InAppMessages
@@ -50,9 +50,9 @@ public partial class InlineResponse2003 : IEquatable<InlineResponse2003>, IValid
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class InlineResponse2003 {\n");
-        sb.Append("  InAppMessages: ").Append(InAppMessages).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class InlineResponse2003 {\n");
+        _ = sb.Append("  InAppMessages: ").Append(InAppMessages).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

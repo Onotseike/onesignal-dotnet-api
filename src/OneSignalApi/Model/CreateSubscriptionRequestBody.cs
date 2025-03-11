@@ -36,7 +36,7 @@ public partial class CreateSubscriptionRequestBody : IEquatable<CreateSubscripti
     /// </summary>
     /// <param name="subscription">subscription.</param>
     /// <param name="retainPreviousOwner">retainPreviousOwner.</param>
-    public CreateSubscriptionRequestBody(SubscriptionObject subscription = default(SubscriptionObject), bool retainPreviousOwner = default(bool))
+    public CreateSubscriptionRequestBody(SubscriptionObject subscription = default, bool retainPreviousOwner = default)
     {
         this.Subscription = subscription;
         this.RetainPreviousOwner = retainPreviousOwner;
@@ -61,10 +61,10 @@ public partial class CreateSubscriptionRequestBody : IEquatable<CreateSubscripti
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateSubscriptionRequestBody {\n");
-        sb.Append("  Subscription: ").Append(Subscription).Append("\n");
-        sb.Append("  RetainPreviousOwner: ").Append(RetainPreviousOwner).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateSubscriptionRequestBody {\n");
+        _ = sb.Append("  Subscription: ").Append(Subscription).Append("\n");
+        _ = sb.Append("  RetainPreviousOwner: ").Append(RetainPreviousOwner).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

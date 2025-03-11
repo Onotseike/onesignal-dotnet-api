@@ -142,7 +142,7 @@ public partial class SubscriptionObject : IEquatable<SubscriptionObject>, IValid
     /// <param name="carrier">carrier.</param>
     /// <param name="webAuth">webAuth.</param>
     /// <param name="webP256">webP256.</param>
-    public SubscriptionObject(string id = default(string), TypeEnum? type = default(TypeEnum?), string token = default(string), bool enabled = default(bool), decimal notificationTypes = default(decimal), decimal sessionTime = default(decimal), decimal sessionCount = default(decimal), string sdk = default(string), string deviceModel = default(string), string deviceOs = default(string), bool rooted = default(bool), decimal testType = default(decimal), string appVersion = default(string), decimal netType = default(decimal), string carrier = default(string), string webAuth = default(string), string webP256 = default(string))
+    public SubscriptionObject(string id = default, TypeEnum? type = default, string token = default, bool enabled = default, int notificationTypes = default, int sessionTime = default, int sessionCount = default, string sdk = default, string deviceModel = default, string deviceOs = default, bool rooted = default, int testType = default, string appVersion = default, decimal netType = default, string carrier = default, string webAuth = default, string webP256 = default)
     {
         this.Id = id;
         this.Type = type;
@@ -185,19 +185,19 @@ public partial class SubscriptionObject : IEquatable<SubscriptionObject>, IValid
     /// Gets or Sets NotificationTypes
     /// </summary>
     [DataMember(Name = "notification_types", EmitDefaultValue = false)]
-    public decimal NotificationTypes { get; set; }
+    public int NotificationTypes { get; set; }
 
     /// <summary>
     /// Gets or Sets SessionTime
     /// </summary>
     [DataMember(Name = "session_time", EmitDefaultValue = false)]
-    public decimal SessionTime { get; set; }
+    public int SessionTime { get; set; }
 
     /// <summary>
     /// Gets or Sets SessionCount
     /// </summary>
     [DataMember(Name = "session_count", EmitDefaultValue = false)]
-    public decimal SessionCount { get; set; }
+    public int SessionCount { get; set; }
 
     /// <summary>
     /// Gets or Sets Sdk
@@ -227,7 +227,7 @@ public partial class SubscriptionObject : IEquatable<SubscriptionObject>, IValid
     /// Gets or Sets TestType
     /// </summary>
     [DataMember(Name = "test_type", EmitDefaultValue = false)]
-    public decimal TestType { get; set; }
+    public int TestType { get; set; }
 
     /// <summary>
     /// Gets or Sets AppVersion
@@ -266,25 +266,25 @@ public partial class SubscriptionObject : IEquatable<SubscriptionObject>, IValid
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class SubscriptionObject {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Type: ").Append(Type).Append("\n");
-        sb.Append("  Token: ").Append(Token).Append("\n");
-        sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-        sb.Append("  NotificationTypes: ").Append(NotificationTypes).Append("\n");
-        sb.Append("  SessionTime: ").Append(SessionTime).Append("\n");
-        sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
-        sb.Append("  Sdk: ").Append(Sdk).Append("\n");
-        sb.Append("  DeviceModel: ").Append(DeviceModel).Append("\n");
-        sb.Append("  DeviceOs: ").Append(DeviceOs).Append("\n");
-        sb.Append("  Rooted: ").Append(Rooted).Append("\n");
-        sb.Append("  TestType: ").Append(TestType).Append("\n");
-        sb.Append("  AppVersion: ").Append(AppVersion).Append("\n");
-        sb.Append("  NetType: ").Append(NetType).Append("\n");
-        sb.Append("  Carrier: ").Append(Carrier).Append("\n");
-        sb.Append("  WebAuth: ").Append(WebAuth).Append("\n");
-        sb.Append("  WebP256: ").Append(WebP256).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class SubscriptionObject {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Type: ").Append(Type).Append("\n");
+        _ = sb.Append("  Token: ").Append(Token).Append("\n");
+        _ = sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+        _ = sb.Append("  NotificationTypes: ").Append(NotificationTypes).Append("\n");
+        _ = sb.Append("  SessionTime: ").Append(SessionTime).Append("\n");
+        _ = sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
+        _ = sb.Append("  Sdk: ").Append(Sdk).Append("\n");
+        _ = sb.Append("  DeviceModel: ").Append(DeviceModel).Append("\n");
+        _ = sb.Append("  DeviceOs: ").Append(DeviceOs).Append("\n");
+        _ = sb.Append("  Rooted: ").Append(Rooted).Append("\n");
+        _ = sb.Append("  TestType: ").Append(TestType).Append("\n");
+        _ = sb.Append("  AppVersion: ").Append(AppVersion).Append("\n");
+        _ = sb.Append("  NetType: ").Append(NetType).Append("\n");
+        _ = sb.Append("  Carrier: ").Append(Carrier).Append("\n");
+        _ = sb.Append("  WebAuth: ").Append(WebAuth).Append("\n");
+        _ = sb.Append("  WebP256: ").Append(WebP256).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

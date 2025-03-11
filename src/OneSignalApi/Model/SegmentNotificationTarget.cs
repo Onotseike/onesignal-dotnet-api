@@ -36,7 +36,7 @@ public partial class SegmentNotificationTarget : IEquatable<SegmentNotificationT
     /// </summary>
     /// <param name="includedSegments">The segment names you want to target. Users in these segments will receive a notification. This targeting parameter is only compatible with excluded_segments. Example: [\&quot;Active Users\&quot;, \&quot;Inactive Users\&quot;] .</param>
     /// <param name="excludedSegments">Segment that will be excluded when sending. Users in these segments will not receive a notification, even if they were included in included_segments. This targeting parameter is only compatible with included_segments. Example: [\&quot;Active Users\&quot;, \&quot;Inactive Users\&quot;] .</param>
-    public SegmentNotificationTarget(List<string> includedSegments = default(List<string>), List<string> excludedSegments = default(List<string>))
+    public SegmentNotificationTarget(List<string> includedSegments = default, List<string> excludedSegments = default)
     {
         this.IncludedSegments = includedSegments;
         this.ExcludedSegments = excludedSegments;
@@ -63,10 +63,10 @@ public partial class SegmentNotificationTarget : IEquatable<SegmentNotificationT
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class SegmentNotificationTarget {\n");
-        sb.Append("  IncludedSegments: ").Append(IncludedSegments).Append("\n");
-        sb.Append("  ExcludedSegments: ").Append(ExcludedSegments).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class SegmentNotificationTarget {\n");
+        _ = sb.Append("  IncludedSegments: ").Append(IncludedSegments).Append("\n");
+        _ = sb.Append("  ExcludedSegments: ").Append(ExcludedSegments).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -73,13 +73,11 @@ public partial class FilterExpressions : AbstractOpenAPISchema, IEquatable<Filte
             {
                 this._actualInstance = value;
             }
-            else if (value.GetType() == typeof(Operator))
-            {
-                this._actualInstance = value;
-            }
             else
             {
-                throw new ArgumentException("Invalid instance found. Must be the following types: Filter, Operator");
+                this._actualInstance = value.GetType() == typeof(Operator)
+                    ? value
+                    : throw new ArgumentException("Invalid instance found. Must be the following types: Filter, Operator");
             }
         }
     }
@@ -105,9 +103,9 @@ public partial class FilterExpressions : AbstractOpenAPISchema, IEquatable<Filte
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.Append("class FilterExpressions {\n");
-        sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class FilterExpressions {\n");
+        _ = sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

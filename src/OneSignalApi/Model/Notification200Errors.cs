@@ -74,13 +74,11 @@ public partial class Notification200Errors : AbstractOpenAPISchema, IEquatable<N
             {
                 this._actualInstance = value;
             }
-            else if (value.GetType() == typeof(List<string>))
-            {
-                this._actualInstance = value;
-            }
             else
             {
-                throw new ArgumentException("Invalid instance found. Must be the following types: InvalidIdentifierError, List<string>");
+                this._actualInstance = value.GetType() == typeof(List<string>)
+                    ? value
+                    : throw new ArgumentException("Invalid instance found. Must be the following types: InvalidIdentifierError, List<string>");
             }
         }
     }
@@ -106,9 +104,9 @@ public partial class Notification200Errors : AbstractOpenAPISchema, IEquatable<N
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.Append("class Notification200Errors {\n");
-        sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Notification200Errors {\n");
+        _ = sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 
@@ -137,14 +135,9 @@ public partial class Notification200Errors : AbstractOpenAPISchema, IEquatable<N
         try
         {
             // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-            if (typeof(InvalidIdentifierError).GetProperty("AdditionalProperties") == null)
-            {
-                newNotification200Errors = new Notification200Errors(JsonConvert.DeserializeObject<InvalidIdentifierError>(jsonString, Notification200Errors.SerializerSettings));
-            }
-            else
-            {
-                newNotification200Errors = new Notification200Errors(JsonConvert.DeserializeObject<InvalidIdentifierError>(jsonString, Notification200Errors.AdditionalPropertiesSerializerSettings));
-            }
+            newNotification200Errors = typeof(InvalidIdentifierError).GetProperty("AdditionalProperties") == null
+                ? new Notification200Errors(JsonConvert.DeserializeObject<InvalidIdentifierError>(jsonString, Notification200Errors.SerializerSettings))
+                : new Notification200Errors(JsonConvert.DeserializeObject<InvalidIdentifierError>(jsonString, Notification200Errors.AdditionalPropertiesSerializerSettings));
             matchedTypes.Add("InvalidIdentifierError");
             match++;
         }
@@ -157,14 +150,9 @@ public partial class Notification200Errors : AbstractOpenAPISchema, IEquatable<N
         try
         {
             // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
-            if (typeof(List<string>).GetProperty("AdditionalProperties") == null)
-            {
-                newNotification200Errors = new Notification200Errors(JsonConvert.DeserializeObject<List<string>>(jsonString, Notification200Errors.SerializerSettings));
-            }
-            else
-            {
-                newNotification200Errors = new Notification200Errors(JsonConvert.DeserializeObject<List<string>>(jsonString, Notification200Errors.AdditionalPropertiesSerializerSettings));
-            }
+            newNotification200Errors = typeof(List<string>).GetProperty("AdditionalProperties") == null
+                ? new Notification200Errors(JsonConvert.DeserializeObject<List<string>>(jsonString, Notification200Errors.SerializerSettings))
+                : new Notification200Errors(JsonConvert.DeserializeObject<List<string>>(jsonString, Notification200Errors.AdditionalPropertiesSerializerSettings));
             matchedTypes.Add("List<string>");
             match++;
         }

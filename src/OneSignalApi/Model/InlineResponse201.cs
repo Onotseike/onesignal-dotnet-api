@@ -35,7 +35,7 @@ public partial class InlineResponse201 : IEquatable<InlineResponse201>, IValidat
     /// Initializes a new instance of the <see cref="InlineResponse201" /> class.
     /// </summary>
     /// <param name="subscription">subscription.</param>
-    public InlineResponse201(SubscriptionObject subscription = default(SubscriptionObject)) => this.Subscription = subscription;
+    public InlineResponse201(SubscriptionObject subscription = default) => this.Subscription = subscription;
 
     /// <summary>
     /// Gets or Sets Subscription
@@ -50,9 +50,9 @@ public partial class InlineResponse201 : IEquatable<InlineResponse201>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class InlineResponse201 {\n");
-        sb.Append("  Subscription: ").Append(Subscription).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class InlineResponse201 {\n");
+        _ = sb.Append("  Subscription: ").Append(Subscription).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

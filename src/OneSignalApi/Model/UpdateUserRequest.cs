@@ -37,7 +37,7 @@ public partial class UpdateUserRequest : IEquatable<UpdateUserRequest>, IValidat
     /// <param name="properties">properties.</param>
     /// <param name="refreshDeviceMetadata">refreshDeviceMetadata (default to false).</param>
     /// <param name="deltas">deltas.</param>
-    public UpdateUserRequest(PropertiesObject properties = default(PropertiesObject), bool refreshDeviceMetadata = false, PropertiesDeltas deltas = default(PropertiesDeltas))
+    public UpdateUserRequest(PropertiesObject properties = default, bool refreshDeviceMetadata = false, PropertiesDeltas deltas = default)
     {
         this.Properties = properties;
         this.RefreshDeviceMetadata = refreshDeviceMetadata;
@@ -69,11 +69,11 @@ public partial class UpdateUserRequest : IEquatable<UpdateUserRequest>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UpdateUserRequest {\n");
-        sb.Append("  Properties: ").Append(Properties).Append("\n");
-        sb.Append("  RefreshDeviceMetadata: ").Append(RefreshDeviceMetadata).Append("\n");
-        sb.Append("  Deltas: ").Append(Deltas).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UpdateUserRequest {\n");
+        _ = sb.Append("  Properties: ").Append(Properties).Append("\n");
+        _ = sb.Append("  RefreshDeviceMetadata: ").Append(RefreshDeviceMetadata).Append("\n");
+        _ = sb.Append("  Deltas: ").Append(Deltas).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

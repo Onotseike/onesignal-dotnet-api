@@ -36,7 +36,7 @@ public partial class CreatePlayerSuccessResponse : IEquatable<CreatePlayerSucces
     /// </summary>
     /// <param name="success">success.</param>
     /// <param name="id">id.</param>
-    public CreatePlayerSuccessResponse(bool success = default(bool), string id = default(string))
+    public CreatePlayerSuccessResponse(bool success = default, string id = default)
     {
         this.Success = success;
         this.Id = id;
@@ -61,10 +61,10 @@ public partial class CreatePlayerSuccessResponse : IEquatable<CreatePlayerSucces
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreatePlayerSuccessResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreatePlayerSuccessResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

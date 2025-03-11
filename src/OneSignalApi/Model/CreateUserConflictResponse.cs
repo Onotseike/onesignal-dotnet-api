@@ -35,7 +35,7 @@ public partial class CreateUserConflictResponse : IEquatable<CreateUserConflictR
     /// Initializes a new instance of the <see cref="CreateUserConflictResponse" /> class.
     /// </summary>
     /// <param name="errors">errors.</param>
-    public CreateUserConflictResponse(List<CreateUserConflictResponseErrorsInner> errors = default(List<CreateUserConflictResponseErrorsInner>)) => this.Errors = errors;
+    public CreateUserConflictResponse(List<CreateUserConflictResponseErrorsInner> errors = default) => this.Errors = errors;
 
     /// <summary>
     /// Gets or Sets Errors
@@ -50,9 +50,9 @@ public partial class CreateUserConflictResponse : IEquatable<CreateUserConflictR
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateUserConflictResponse {\n");
-        sb.Append("  Errors: ").Append(Errors).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateUserConflictResponse {\n");
+        _ = sb.Append("  Errors: ").Append(Errors).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

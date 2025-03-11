@@ -234,7 +234,7 @@ public class Multimap<TKey, TValue> : IDictionary<TKey, IList<TValue>>
      */
     private bool TryRemove(TKey key, out IList<TValue> value)
     {
-        _dictionary.TryGetValue(key, out value);
+        _ = _dictionary.TryGetValue(key, out value);
         return _dictionary.Remove(key);
     }
 

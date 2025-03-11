@@ -36,7 +36,7 @@ public partial class CreateSegmentConflictResponse : IEquatable<CreateSegmentCon
     /// </summary>
     /// <param name="success">success.</param>
     /// <param name="errors">errors.</param>
-    public CreateSegmentConflictResponse(bool success = default(bool), List<string> errors = default(List<string>))
+    public CreateSegmentConflictResponse(bool success = default, List<string> errors = default)
     {
         this.Success = success;
         this.Errors = errors;
@@ -61,10 +61,10 @@ public partial class CreateSegmentConflictResponse : IEquatable<CreateSegmentCon
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateSegmentConflictResponse {\n");
-        sb.Append("  Success: ").Append(Success).Append("\n");
-        sb.Append("  Errors: ").Append(Errors).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateSegmentConflictResponse {\n");
+        _ = sb.Append("  Success: ").Append(Success).Append("\n");
+        _ = sb.Append("  Errors: ").Append(Errors).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

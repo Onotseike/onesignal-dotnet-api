@@ -37,7 +37,7 @@ public partial class CreateUserConflictResponseErrorsInner : IEquatable<CreateUs
     /// <param name="code">code.</param>
     /// <param name="title">title.</param>
     /// <param name="meta">meta.</param>
-    public CreateUserConflictResponseErrorsInner(string code = default(string), string title = default(string), CreateUserConflictResponseErrorsItemsMeta meta = default(CreateUserConflictResponseErrorsItemsMeta))
+    public CreateUserConflictResponseErrorsInner(string code = default, string title = default, CreateUserConflictResponseErrorsItemsMeta meta = default)
     {
         this.Code = code;
         this.Title = title;
@@ -69,11 +69,11 @@ public partial class CreateUserConflictResponseErrorsInner : IEquatable<CreateUs
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateUserConflictResponseErrorsInner {\n");
-        sb.Append("  Code: ").Append(Code).Append("\n");
-        sb.Append("  Title: ").Append(Title).Append("\n");
-        sb.Append("  Meta: ").Append(Meta).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateUserConflictResponseErrorsInner {\n");
+        _ = sb.Append("  Code: ").Append(Code).Append("\n");
+        _ = sb.Append("  Title: ").Append(Title).Append("\n");
+        _ = sb.Append("  Meta: ").Append(Meta).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

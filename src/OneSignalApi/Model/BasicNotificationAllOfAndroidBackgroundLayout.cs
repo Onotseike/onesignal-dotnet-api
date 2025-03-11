@@ -37,7 +37,7 @@ public partial class BasicNotificationAllOfAndroidBackgroundLayout : IEquatable<
     /// <param name="image">Asset file, android resource name, or URL to remote image..</param>
     /// <param name="headingsColor">Title text color ARGB Hex format. Example(Blue) \&quot;FF0000FF\&quot;..</param>
     /// <param name="contentsColor">Body text color ARGB Hex format. Example(Red) \&quot;FFFF0000\&quot;..</param>
-    public BasicNotificationAllOfAndroidBackgroundLayout(string image = default(string), string headingsColor = default(string), string contentsColor = default(string))
+    public BasicNotificationAllOfAndroidBackgroundLayout(string image = default, string headingsColor = default, string contentsColor = default)
     {
         this.Image = image;
         this.HeadingsColor = headingsColor;
@@ -72,11 +72,11 @@ public partial class BasicNotificationAllOfAndroidBackgroundLayout : IEquatable<
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class BasicNotificationAllOfAndroidBackgroundLayout {\n");
-        sb.Append("  Image: ").Append(Image).Append("\n");
-        sb.Append("  HeadingsColor: ").Append(HeadingsColor).Append("\n");
-        sb.Append("  ContentsColor: ").Append(ContentsColor).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class BasicNotificationAllOfAndroidBackgroundLayout {\n");
+        _ = sb.Append("  Image: ").Append(Image).Append("\n");
+        _ = sb.Append("  HeadingsColor: ").Append(HeadingsColor).Append("\n");
+        _ = sb.Append("  ContentsColor: ").Append(ContentsColor).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -106,7 +106,7 @@ public partial class Filter : IEquatable<Filter>, IValidatableObject
     /// <param name="key">If &#x60;field&#x60; is &#x60;tag&#x60;, this field is *required* to specify &#x60;key&#x60; inside the tags..</param>
     /// <param name="value">Constant value to use as the second operand in the filter expression. This value is *required* when the relation operator is a binary operator..</param>
     /// <param name="relation">Operator of a filter expression. (required).</param>
-    public Filter(string field = default(string), string key = default(string), string value = default(string), RelationEnum relation = default(RelationEnum))
+    public Filter(string field = default, string key = default, string value = default, RelationEnum relation = default)
     {
         // to ensure "field" is required (not null)
         if (field == null)
@@ -147,12 +147,12 @@ public partial class Filter : IEquatable<Filter>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Filter {\n");
-        sb.Append("  Field: ").Append(Field).Append("\n");
-        sb.Append("  Key: ").Append(Key).Append("\n");
-        sb.Append("  Value: ").Append(Value).Append("\n");
-        sb.Append("  Relation: ").Append(Relation).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Filter {\n");
+        _ = sb.Append("  Field: ").Append(Field).Append("\n");
+        _ = sb.Append("  Key: ").Append(Key).Append("\n");
+        _ = sb.Append("  Value: ").Append(Value).Append("\n");
+        _ = sb.Append("  Relation: ").Append(Relation).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

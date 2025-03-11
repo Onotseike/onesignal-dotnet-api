@@ -38,7 +38,7 @@ public partial class NotificationSlice : IEquatable<NotificationSlice>, IValidat
     /// <param name="offset">offset.</param>
     /// <param name="limit">limit.</param>
     /// <param name="notifications">notifications.</param>
-    public NotificationSlice(int totalCount = default(int), int offset = default(int), int limit = default(int), List<NotificationWithMeta> notifications = default(List<NotificationWithMeta>))
+    public NotificationSlice(int totalCount = default, int offset = default, int limit = default, List<NotificationWithMeta> notifications = default)
     {
         this.TotalCount = totalCount;
         this.Offset = offset;
@@ -77,12 +77,12 @@ public partial class NotificationSlice : IEquatable<NotificationSlice>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class NotificationSlice {\n");
-        sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-        sb.Append("  Offset: ").Append(Offset).Append("\n");
-        sb.Append("  Limit: ").Append(Limit).Append("\n");
-        sb.Append("  Notifications: ").Append(Notifications).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class NotificationSlice {\n");
+        _ = sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
+        _ = sb.Append("  Offset: ").Append(Offset).Append("\n");
+        _ = sb.Append("  Limit: ").Append(Limit).Append("\n");
+        _ = sb.Append("  Notifications: ").Append(Notifications).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

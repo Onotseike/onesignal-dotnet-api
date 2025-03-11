@@ -35,7 +35,7 @@ public partial class InlineResponse202 : IEquatable<InlineResponse202>, IValidat
     /// Initializes a new instance of the <see cref="InlineResponse202" /> class.
     /// </summary>
     /// <param name="properties">properties.</param>
-    public InlineResponse202(PropertiesObject properties = default(PropertiesObject)) => this.Properties = properties;
+    public InlineResponse202(PropertiesObject properties = default) => this.Properties = properties;
 
     /// <summary>
     /// Gets or Sets Properties
@@ -50,9 +50,9 @@ public partial class InlineResponse202 : IEquatable<InlineResponse202>, IValidat
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class InlineResponse202 {\n");
-        sb.Append("  Properties: ").Append(Properties).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class InlineResponse202 {\n");
+        _ = sb.Append("  Properties: ").Append(Properties).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

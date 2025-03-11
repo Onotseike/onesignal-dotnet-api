@@ -37,7 +37,7 @@ public partial class ExportPlayersRequestBody : IEquatable<ExportPlayersRequestB
     /// <param name="extraFields">Additional fields that you wish to include. Currently supports location, country, rooted, notification_types, ip, external_user_id, web_auth, and web_p256..</param>
     /// <param name="lastActiveSince">Export all devices with a last_active timestamp greater than this time.  Unixtime in seconds..</param>
     /// <param name="segmentName">Export all devices belonging to the segment..</param>
-    public ExportPlayersRequestBody(List<string> extraFields = default(List<string>), string lastActiveSince = default(string), string segmentName = default(string))
+    public ExportPlayersRequestBody(List<string> extraFields = default, string lastActiveSince = default, string segmentName = default)
     {
         this.ExtraFields = extraFields;
         this.LastActiveSince = lastActiveSince;
@@ -72,11 +72,11 @@ public partial class ExportPlayersRequestBody : IEquatable<ExportPlayersRequestB
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class ExportPlayersRequestBody {\n");
-        sb.Append("  ExtraFields: ").Append(ExtraFields).Append("\n");
-        sb.Append("  LastActiveSince: ").Append(LastActiveSince).Append("\n");
-        sb.Append("  SegmentName: ").Append(SegmentName).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class ExportPlayersRequestBody {\n");
+        _ = sb.Append("  ExtraFields: ").Append(ExtraFields).Append("\n");
+        _ = sb.Append("  LastActiveSince: ").Append(LastActiveSince).Append("\n");
+        _ = sb.Append("  SegmentName: ").Append(SegmentName).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

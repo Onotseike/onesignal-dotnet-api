@@ -65,7 +65,7 @@ internal class CustomJsonCodec : IRestSerializer, ISerializer, IDeserializer
 
     public string Serialize(object obj)
     {
-        if (obj != null && obj is OneSignalApi.Model.AbstractOpenAPISchema)
+        if (obj is not null and OneSignalApi.Model.AbstractOpenAPISchema)
         {
             // the object to be serialized is an oneOf/anyOf schema
             return ((OneSignalApi.Model.AbstractOpenAPISchema)obj).ToJson();
@@ -134,10 +134,10 @@ internal class CustomJsonCodec : IRestSerializer, ISerializer, IDeserializer
         }
     }
 
-    public string[] AcceptedContentTypes => new string[]
-    {
+    public string[] AcceptedContentTypes =>
+    [
         "application/json"
-    };
+    ];
 
     public SupportsContentType SupportsContentType => contentType => contentType.Value.Contains("json");
 
@@ -283,7 +283,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         {
             foreach (var pathParam in options.PathParameters)
             {
-                request.AddParameter(pathParam.Key, pathParam.Value, ParameterType.UrlSegment);
+                _ = request.AddParameter(pathParam.Key, pathParam.Value, ParameterType.UrlSegment);
             }
         }
 
@@ -293,19 +293,19 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
             {
                 foreach (var value in queryParam.Value)
                 {
-                    request.AddQueryParameter(queryParam.Key, value);
+                    _ = request.AddQueryParameter(queryParam.Key, value);
                 }
             }
         }
 
         // Always add the One Signal telemetry to the request.
-        request.AddHeader("OS-Usage-Data", "kind=sdk, sdk-name=onesignal-dotnet, version=1.2.1");
+        _ = request.AddHeader("OS-Usage-Data", "kind=sdk, sdk-name=onesignal-dotnet, version=1.2.1");
 
         if (configuration.DefaultHeaders != null)
         {
             foreach (var headerParam in configuration.DefaultHeaders)
             {
-                request.AddHeader(headerParam.Key, headerParam.Value);
+                _ = request.AddHeader(headerParam.Key, headerParam.Value);
             }
         }
 
@@ -315,7 +315,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
             {
                 foreach (var value in headerParam.Value)
                 {
-                    request.AddHeader(headerParam.Key, value);
+                    _ = request.AddHeader(headerParam.Key, value);
                 }
             }
         }
@@ -324,7 +324,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         {
             foreach (var formParam in options.FormParameters)
             {
-                request.AddParameter(formParam.Key, formParam.Value);
+                _ = request.AddParameter(formParam.Key, formParam.Value);
             }
         }
 
@@ -340,7 +340,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
                 }
 
                 var bytes = ClientUtils.ReadAsBytes(stream);
-                request.AddParameter(contentType, bytes, ParameterType.RequestBody);
+                _ = request.AddParameter(contentType, bytes, ParameterType.RequestBody);
             }
             else
             {
@@ -362,7 +362,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
                     request.RequestFormat = DataFormat.Json;
                 }
 
-                request.AddJsonBody(options.Data);
+                _ = request.AddJsonBody(options.Data);
             }
         }
 
@@ -373,13 +373,9 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
                 foreach (var file in fileParam.Value)
                 {
                     var bytes = ClientUtils.ReadAsBytes(file);
-                    var fileStream = file as FileStream;
-                    if (fileStream != null)
-                    {
-                        request.AddFile(fileParam.Key, bytes, System.IO.Path.GetFileName(fileStream.Name));
-                    }
-                    else
-                        request.AddFile(fileParam.Key, bytes, "no_file_name_provided");
+                    _ = file is FileStream fileStream
+                        ? request.AddFile(fileParam.Key, bytes, System.IO.Path.GetFileName(fileStream.Name))
+                        : request.AddFile(fileParam.Key, bytes, "no_file_name_provided");
                 }
             }
         }
@@ -388,7 +384,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         {
             foreach (var cookie in options.Cookies)
             {
-                request.AddCookie(cookie.Name, cookie.Value, cookie.Path, cookie.Domain);
+                _ = request.AddCookie(cookie.Name, cookie.Value, cookie.Path, cookie.Domain);
             }
         }
 
@@ -437,7 +433,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
 
         var restClientOptions = new RestClientOptions(baseUrl)
         {
-            MaxTimeout = configuration.Timeout,
+            Timeout = TimeSpan.FromMilliseconds(configuration.Timeout),
         };
 
         //client.ClearHandlers();
@@ -505,11 +501,11 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         {
             try
             {
-                response.Data = (T)typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
+                response.Data = (T)typeof(T).GetMethod("FromJson").Invoke(null, [response.Content]);
             }
             catch (Exception ex)
             {
-                throw ex.InnerException != null ? ex.InnerException : ex;
+                throw ex.InnerException ?? ex;
             }
         }
         else if (typeof(T).Name == "Stream") // for binary response
@@ -558,13 +554,13 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         return result;
     }
 
-    private async Task<ApiResponse<T>> ExecAsync<T>(RestRequest req, RequestOptions options, IReadableConfiguration configuration, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    private async Task<ApiResponse<T>> ExecAsync<T>(RestRequest req, RequestOptions options, IReadableConfiguration configuration, System.Threading.CancellationToken cancellationToken = default)
     {
         var baseUrl = configuration.GetOperationServerUrl(options.Operation, options.OperationIndex) ?? _baseUrl;
 
         var restClientOptions = new RestClientOptions(baseUrl)
         {
-            MaxTimeout = configuration.Timeout,
+            Timeout = TimeSpan.FromMilliseconds(configuration.Timeout),
         };
 
         //client.ClearHandlers();
@@ -632,7 +628,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
         // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
         if (typeof(OneSignalApi.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
         {
-            response.Data = (T)typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
+            response.Data = (T)typeof(T).GetMethod("FromJson").Invoke(null, [response.Content]);
         }
         else if (typeof(T).Name == "Stream") // for binary response
         {
@@ -690,7 +686,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Get, path, options, config), options, config, cancellationToken);
@@ -705,7 +701,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Post, path, options, config), options, config, cancellationToken);
@@ -720,7 +716,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Put, path, options, config), options, config, cancellationToken);
@@ -735,7 +731,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Delete, path, options, config), options, config, cancellationToken);
@@ -750,7 +746,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Head, path, options, config), options, config, cancellationToken);
@@ -765,7 +761,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Options, path, options, config), options, config, cancellationToken);
@@ -780,7 +776,7 @@ public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     /// GlobalConfiguration has been done before calling this method.</param>
     /// <param name="cancellationToken">Token that enables callers to cancel the request.</param>
     /// <returns>A Task containing ApiResponse</returns>
-    public Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+    public Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, System.Threading.CancellationToken cancellationToken = default)
     {
         var config = configuration ?? GlobalConfiguration.Instance;
         return ExecAsync<T>(NewRequest(HttpMethod.Patch, path, options, config), options, config, cancellationToken);

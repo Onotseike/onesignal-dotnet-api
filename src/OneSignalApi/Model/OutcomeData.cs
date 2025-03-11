@@ -67,7 +67,7 @@ public partial class OutcomeData : IEquatable<OutcomeData>, IValidatableObject
     /// <param name="id">id (required).</param>
     /// <param name="value">value (required).</param>
     /// <param name="aggregation">aggregation (required).</param>
-    public OutcomeData(string id = default(string), int value = default(int), AggregationEnum aggregation = default(AggregationEnum))
+    public OutcomeData(string id = default, int value = default, AggregationEnum aggregation = default)
     {
         // to ensure "id" is required (not null)
         if (id == null)
@@ -98,11 +98,11 @@ public partial class OutcomeData : IEquatable<OutcomeData>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class OutcomeData {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Value: ").Append(Value).Append("\n");
-        sb.Append("  Aggregation: ").Append(Aggregation).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class OutcomeData {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Value: ").Append(Value).Append("\n");
+        _ = sb.Append("  Aggregation: ").Append(Aggregation).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

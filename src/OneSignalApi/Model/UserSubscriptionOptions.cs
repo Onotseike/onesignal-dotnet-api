@@ -35,7 +35,7 @@ public partial class UserSubscriptionOptions : IEquatable<UserSubscriptionOption
     /// Initializes a new instance of the <see cref="UserSubscriptionOptions" /> class.
     /// </summary>
     /// <param name="retainPreviousOwner">retainPreviousOwner.</param>
-    public UserSubscriptionOptions(bool retainPreviousOwner = default(bool)) => this.RetainPreviousOwner = retainPreviousOwner;
+    public UserSubscriptionOptions(bool retainPreviousOwner = default) => this.RetainPreviousOwner = retainPreviousOwner;
 
     /// <summary>
     /// Gets or Sets RetainPreviousOwner
@@ -50,9 +50,9 @@ public partial class UserSubscriptionOptions : IEquatable<UserSubscriptionOption
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class UserSubscriptionOptions {\n");
-        sb.Append("  RetainPreviousOwner: ").Append(RetainPreviousOwner).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class UserSubscriptionOptions {\n");
+        _ = sb.Append("  RetainPreviousOwner: ").Append(RetainPreviousOwner).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

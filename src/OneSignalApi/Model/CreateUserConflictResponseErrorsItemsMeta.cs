@@ -35,7 +35,7 @@ public partial class CreateUserConflictResponseErrorsItemsMeta : IEquatable<Crea
     /// Initializes a new instance of the <see cref="CreateUserConflictResponseErrorsItemsMeta" /> class.
     /// </summary>
     /// <param name="conflictingAliases">conflictingAliases.</param>
-    public CreateUserConflictResponseErrorsItemsMeta(Object conflictingAliases = default(Object)) => this.ConflictingAliases = conflictingAliases;
+    public CreateUserConflictResponseErrorsItemsMeta(Object conflictingAliases = default) => this.ConflictingAliases = conflictingAliases;
 
     /// <summary>
     /// Gets or Sets ConflictingAliases
@@ -50,9 +50,9 @@ public partial class CreateUserConflictResponseErrorsItemsMeta : IEquatable<Crea
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class CreateUserConflictResponseErrorsItemsMeta {\n");
-        sb.Append("  ConflictingAliases: ").Append(ConflictingAliases).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class CreateUserConflictResponseErrorsItemsMeta {\n");
+        _ = sb.Append("  ConflictingAliases: ").Append(ConflictingAliases).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

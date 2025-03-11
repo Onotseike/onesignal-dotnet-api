@@ -35,7 +35,7 @@ public partial class OutcomesData : IEquatable<OutcomesData>, IValidatableObject
     /// Initializes a new instance of the <see cref="OutcomesData" /> class.
     /// </summary>
     /// <param name="outcomes">outcomes.</param>
-    public OutcomesData(List<OutcomeData> outcomes = default(List<OutcomeData>)) => this.Outcomes = outcomes;
+    public OutcomesData(List<OutcomeData> outcomes = default) => this.Outcomes = outcomes;
 
     /// <summary>
     /// Gets or Sets Outcomes
@@ -50,9 +50,9 @@ public partial class OutcomesData : IEquatable<OutcomesData>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class OutcomesData {\n");
-        sb.Append("  Outcomes: ").Append(Outcomes).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class OutcomesData {\n");
+        _ = sb.Append("  Outcomes: ").Append(Outcomes).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

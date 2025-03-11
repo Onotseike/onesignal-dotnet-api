@@ -64,7 +64,7 @@ public partial class Player : IEquatable<Player>, IValidatableObject
     /// <param name="_long">Longitude of the device, used for geotagging to segment on..</param>
     /// <param name="lat">Latitude of the device, used for geotagging to segment on..</param>
     /// <param name="country">Country code in the ISO 3166-1 Alpha 2 format.</param>
-    public Player(string appId = default(string), int deviceType = default(int), string externalUserId = default(string), string externalUserIdAuthHash = default(string), string emailAuthHash = default(string), string identifier = default(string), string language = default(string), int? timezone = default(int?), string gameVersion = default(string), string deviceModel = default(string), string deviceOs = default(string), string adId = default(string), string sdk = default(string), int sessionCount = default(int), Object tags = default(Object), decimal amountSpent = default(decimal), long createdAt = default(long), long playtime = default(long), int badgeCount = default(int), int lastActive = default(int), int notificationTypes = default(int), int? testType = default(int?), decimal _long = default(decimal), decimal lat = default(decimal), string country = default(string))
+    public Player(string appId = default, int deviceType = default, string externalUserId = default, string externalUserIdAuthHash = default, string emailAuthHash = default, string identifier = default, string language = default, int? timezone = default, string gameVersion = default, string deviceModel = default, string deviceOs = default, string adId = default, string sdk = default, int sessionCount = default, Object tags = default, decimal amountSpent = default, long createdAt = default, long playtime = default, int badgeCount = default, int lastActive = default, int notificationTypes = default, int? testType = default, decimal _long = default, decimal lat = default, string country = default)
     {
         this.DeviceType = deviceType;
         this.AppId = appId;
@@ -298,35 +298,35 @@ public partial class Player : IEquatable<Player>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Player {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  InvalidIdentifier: ").Append(InvalidIdentifier).Append("\n");
-        sb.Append("  AppId: ").Append(AppId).Append("\n");
-        sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
-        sb.Append("  ExternalUserId: ").Append(ExternalUserId).Append("\n");
-        sb.Append("  ExternalUserIdAuthHash: ").Append(ExternalUserIdAuthHash).Append("\n");
-        sb.Append("  EmailAuthHash: ").Append(EmailAuthHash).Append("\n");
-        sb.Append("  Identifier: ").Append(Identifier).Append("\n");
-        sb.Append("  Language: ").Append(Language).Append("\n");
-        sb.Append("  Timezone: ").Append(Timezone).Append("\n");
-        sb.Append("  GameVersion: ").Append(GameVersion).Append("\n");
-        sb.Append("  DeviceModel: ").Append(DeviceModel).Append("\n");
-        sb.Append("  DeviceOs: ").Append(DeviceOs).Append("\n");
-        sb.Append("  AdId: ").Append(AdId).Append("\n");
-        sb.Append("  Sdk: ").Append(Sdk).Append("\n");
-        sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
-        sb.Append("  Tags: ").Append(Tags).Append("\n");
-        sb.Append("  AmountSpent: ").Append(AmountSpent).Append("\n");
-        sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
-        sb.Append("  Playtime: ").Append(Playtime).Append("\n");
-        sb.Append("  BadgeCount: ").Append(BadgeCount).Append("\n");
-        sb.Append("  LastActive: ").Append(LastActive).Append("\n");
-        sb.Append("  NotificationTypes: ").Append(NotificationTypes).Append("\n");
-        sb.Append("  TestType: ").Append(TestType).Append("\n");
-        sb.Append("  Long: ").Append(Long).Append("\n");
-        sb.Append("  Lat: ").Append(Lat).Append("\n");
-        sb.Append("  Country: ").Append(Country).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Player {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  InvalidIdentifier: ").Append(InvalidIdentifier).Append("\n");
+        _ = sb.Append("  AppId: ").Append(AppId).Append("\n");
+        _ = sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
+        _ = sb.Append("  ExternalUserId: ").Append(ExternalUserId).Append("\n");
+        _ = sb.Append("  ExternalUserIdAuthHash: ").Append(ExternalUserIdAuthHash).Append("\n");
+        _ = sb.Append("  EmailAuthHash: ").Append(EmailAuthHash).Append("\n");
+        _ = sb.Append("  Identifier: ").Append(Identifier).Append("\n");
+        _ = sb.Append("  Language: ").Append(Language).Append("\n");
+        _ = sb.Append("  Timezone: ").Append(Timezone).Append("\n");
+        _ = sb.Append("  GameVersion: ").Append(GameVersion).Append("\n");
+        _ = sb.Append("  DeviceModel: ").Append(DeviceModel).Append("\n");
+        _ = sb.Append("  DeviceOs: ").Append(DeviceOs).Append("\n");
+        _ = sb.Append("  AdId: ").Append(AdId).Append("\n");
+        _ = sb.Append("  Sdk: ").Append(Sdk).Append("\n");
+        _ = sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
+        _ = sb.Append("  Tags: ").Append(Tags).Append("\n");
+        _ = sb.Append("  AmountSpent: ").Append(AmountSpent).Append("\n");
+        _ = sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+        _ = sb.Append("  Playtime: ").Append(Playtime).Append("\n");
+        _ = sb.Append("  BadgeCount: ").Append(BadgeCount).Append("\n");
+        _ = sb.Append("  LastActive: ").Append(LastActive).Append("\n");
+        _ = sb.Append("  NotificationTypes: ").Append(NotificationTypes).Append("\n");
+        _ = sb.Append("  TestType: ").Append(TestType).Append("\n");
+        _ = sb.Append("  Long: ").Append(Long).Append("\n");
+        _ = sb.Append("  Lat: ").Append(Lat).Append("\n");
+        _ = sb.Append("  Country: ").Append(Country).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

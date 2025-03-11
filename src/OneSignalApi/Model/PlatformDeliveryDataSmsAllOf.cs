@@ -37,7 +37,7 @@ public partial class PlatformDeliveryDataSmsAllOf : IEquatable<PlatformDeliveryD
     /// <param name="providerSuccessful">Number of messages reported as delivered successfully by the SMS service provider..</param>
     /// <param name="providerFailed">Number of recipients who didn&#39;t receive your message as reported by the SMS service provider..</param>
     /// <param name="providerErrored">Number of errors reported by the SMS service provider..</param>
-    public PlatformDeliveryDataSmsAllOf(int? providerSuccessful = default(int?), int? providerFailed = default(int?), int? providerErrored = default(int?))
+    public PlatformDeliveryDataSmsAllOf(int? providerSuccessful = default, int? providerFailed = default, int? providerErrored = default)
     {
         this.ProviderSuccessful = providerSuccessful;
         this.ProviderFailed = providerFailed;
@@ -72,11 +72,11 @@ public partial class PlatformDeliveryDataSmsAllOf : IEquatable<PlatformDeliveryD
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlatformDeliveryDataSmsAllOf {\n");
-        sb.Append("  ProviderSuccessful: ").Append(ProviderSuccessful).Append("\n");
-        sb.Append("  ProviderFailed: ").Append(ProviderFailed).Append("\n");
-        sb.Append("  ProviderErrored: ").Append(ProviderErrored).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlatformDeliveryDataSmsAllOf {\n");
+        _ = sb.Append("  ProviderSuccessful: ").Append(ProviderSuccessful).Append("\n");
+        _ = sb.Append("  ProviderFailed: ").Append(ProviderFailed).Append("\n");
+        _ = sb.Append("  ProviderErrored: ").Append(ProviderErrored).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

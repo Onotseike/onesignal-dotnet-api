@@ -73,13 +73,11 @@ public partial class NotificationTarget : AbstractOpenAPISchema, IEquatable<Noti
             {
                 this._actualInstance = value;
             }
-            else if (value.GetType() == typeof(SegmentNotificationTarget))
-            {
-                this._actualInstance = value;
-            }
             else
             {
-                throw new ArgumentException("Invalid instance found. Must be the following types: PlayerNotificationTarget, SegmentNotificationTarget");
+                this._actualInstance = value.GetType() == typeof(SegmentNotificationTarget)
+                    ? value
+                    : throw new ArgumentException("Invalid instance found. Must be the following types: PlayerNotificationTarget, SegmentNotificationTarget");
             }
         }
     }
@@ -105,9 +103,9 @@ public partial class NotificationTarget : AbstractOpenAPISchema, IEquatable<Noti
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.Append("class NotificationTarget {\n");
-        sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class NotificationTarget {\n");
+        _ = sb.Append("  ActualInstance: ").Append(this.ActualInstance).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

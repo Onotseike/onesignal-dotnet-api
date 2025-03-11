@@ -235,7 +235,7 @@ public class Configuration : IReadableConfiguration
     public string GetApiKeyWithPrefix(string apiKeyIdentifier)
     {
         string apiKeyValue;
-        ApiKey.TryGetValue(apiKeyIdentifier, out apiKeyValue);
+        _ = ApiKey.TryGetValue(apiKeyIdentifier, out apiKeyValue);
         string apiKeyPrefix;
         return ApiKeyPrefix.TryGetValue(apiKeyIdentifier, out apiKeyPrefix) ? apiKeyPrefix + " " + apiKeyValue : apiKeyValue;
     }
@@ -273,18 +273,11 @@ public class Configuration : IReadableConfiguration
             // create the directory if it does not exist
             if (!Directory.Exists(value))
             {
-                Directory.CreateDirectory(value);
+                _ = Directory.CreateDirectory(value);
             }
 
             // check if the path contains directory separator at the end
-            if (value[value.Length - 1] == Path.DirectorySeparatorChar)
-            {
-                _tempFolderPath = value;
-            }
-            else
-            {
-                _tempFolderPath = value + Path.DirectorySeparatorChar;
-            }
+            _tempFolderPath = value[value.Length - 1] == Path.DirectorySeparatorChar ? value : value + Path.DirectorySeparatorChar;
         }
     }
 
@@ -459,14 +452,9 @@ public class Configuration : IReadableConfiguration
 
                 if (inputVariables.ContainsKey(variable.Key))
                 {
-                    if (((List<string>)serverVariables["enum_values"]).Contains(inputVariables[variable.Key]))
-                    {
-                        url = url.Replace("{" + variable.Key + "}", inputVariables[variable.Key]);
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException($"The variable `{variable.Key}` in the server URL has invalid value #{inputVariables[variable.Key]}. Must be {(List<string>)serverVariables["enum_values"]}");
-                    }
+                    url = ((List<string>)serverVariables["enum_values"]).Contains(inputVariables[variable.Key])
+                        ? url.Replace("{" + variable.Key + "}", inputVariables[variable.Key])
+                        : throw new InvalidOperationException($"The variable `{variable.Key}` in the server URL has invalid value #{inputVariables[variable.Key]}. Must be {(List<string>)serverVariables["enum_values"]}");
                 }
                 else
                 {

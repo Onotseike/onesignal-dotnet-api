@@ -62,7 +62,7 @@ public partial class Operator : IEquatable<Operator>, IValidatableObject
     /// Initializes a new instance of the <see cref="Operator" /> class.
     /// </summary>
     /// <param name="_operator">Strictly, this must be either &#x60;\&quot;OR\&quot;&#x60;, or &#x60;\&quot;AND\&quot;&#x60;.  It can be used to compose Filters as part of a Filters object..</param>
-    public Operator(OperatorEnum? _operator = default(OperatorEnum?)) => this._Operator = _operator;
+    public Operator(OperatorEnum? _operator = default) => this._Operator = _operator;
 
     /// <summary>
     /// Returns the string presentation of the object
@@ -71,9 +71,9 @@ public partial class Operator : IEquatable<Operator>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Operator {\n");
-        sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Operator {\n");
+        _ = sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

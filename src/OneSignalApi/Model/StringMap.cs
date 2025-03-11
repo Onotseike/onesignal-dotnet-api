@@ -77,7 +77,7 @@ public partial class StringMap : IEquatable<StringMap>, IValidatableObject
     /// <param name="tr">Text in Turkish..</param>
     /// <param name="uk">Text in Ukrainian..</param>
     /// <param name="vi">Text in Vietnamese..</param>
-    public StringMap(string en = default(string), string ar = default(string), string bs = default(string), string bg = default(string), string ca = default(string), string zhHans = default(string), string zhHant = default(string), string zh = default(string), string hr = default(string), string cs = default(string), string da = default(string), string nl = default(string), string et = default(string), string fi = default(string), string fr = default(string), string ka = default(string), string de = default(string), string el = default(string), string hi = default(string), string he = default(string), string hu = default(string), string id = default(string), string it = default(string), string ja = default(string), string ko = default(string), string lv = default(string), string lt = default(string), string ms = default(string), string nb = default(string), string pl = default(string), string fa = default(string), string pt = default(string), string pa = default(string), string ro = default(string), string ru = default(string), string sr = default(string), string sk = default(string), string es = default(string), string sv = default(string), string th = default(string), string tr = default(string), string uk = default(string), string vi = default(string))
+    public StringMap(string en = default, string ar = default, string bs = default, string bg = default, string ca = default, string zhHans = default, string zhHant = default, string zh = default, string hr = default, string cs = default, string da = default, string nl = default, string et = default, string fi = default, string fr = default, string ka = default, string de = default, string el = default, string hi = default, string he = default, string hu = default, string id = default, string it = default, string ja = default, string ko = default, string lv = default, string lt = default, string ms = default, string nb = default, string pl = default, string fa = default, string pt = default, string pa = default, string ro = default, string ru = default, string sr = default, string sk = default, string es = default, string sv = default, string th = default, string tr = default, string uk = default, string vi = default)
     {
         this.En = en;
         this.Ar = ar;
@@ -432,51 +432,51 @@ public partial class StringMap : IEquatable<StringMap>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class StringMap {\n");
-        sb.Append("  En: ").Append(En).Append("\n");
-        sb.Append("  Ar: ").Append(Ar).Append("\n");
-        sb.Append("  Bs: ").Append(Bs).Append("\n");
-        sb.Append("  Bg: ").Append(Bg).Append("\n");
-        sb.Append("  Ca: ").Append(Ca).Append("\n");
-        sb.Append("  ZhHans: ").Append(ZhHans).Append("\n");
-        sb.Append("  ZhHant: ").Append(ZhHant).Append("\n");
-        sb.Append("  Zh: ").Append(Zh).Append("\n");
-        sb.Append("  Hr: ").Append(Hr).Append("\n");
-        sb.Append("  Cs: ").Append(Cs).Append("\n");
-        sb.Append("  Da: ").Append(Da).Append("\n");
-        sb.Append("  Nl: ").Append(Nl).Append("\n");
-        sb.Append("  Et: ").Append(Et).Append("\n");
-        sb.Append("  Fi: ").Append(Fi).Append("\n");
-        sb.Append("  Fr: ").Append(Fr).Append("\n");
-        sb.Append("  Ka: ").Append(Ka).Append("\n");
-        sb.Append("  De: ").Append(De).Append("\n");
-        sb.Append("  El: ").Append(El).Append("\n");
-        sb.Append("  Hi: ").Append(Hi).Append("\n");
-        sb.Append("  He: ").Append(He).Append("\n");
-        sb.Append("  Hu: ").Append(Hu).Append("\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  It: ").Append(It).Append("\n");
-        sb.Append("  Ja: ").Append(Ja).Append("\n");
-        sb.Append("  Ko: ").Append(Ko).Append("\n");
-        sb.Append("  Lv: ").Append(Lv).Append("\n");
-        sb.Append("  Lt: ").Append(Lt).Append("\n");
-        sb.Append("  Ms: ").Append(Ms).Append("\n");
-        sb.Append("  Nb: ").Append(Nb).Append("\n");
-        sb.Append("  Pl: ").Append(Pl).Append("\n");
-        sb.Append("  Fa: ").Append(Fa).Append("\n");
-        sb.Append("  Pt: ").Append(Pt).Append("\n");
-        sb.Append("  Pa: ").Append(Pa).Append("\n");
-        sb.Append("  Ro: ").Append(Ro).Append("\n");
-        sb.Append("  Ru: ").Append(Ru).Append("\n");
-        sb.Append("  Sr: ").Append(Sr).Append("\n");
-        sb.Append("  Sk: ").Append(Sk).Append("\n");
-        sb.Append("  Es: ").Append(Es).Append("\n");
-        sb.Append("  Sv: ").Append(Sv).Append("\n");
-        sb.Append("  Th: ").Append(Th).Append("\n");
-        sb.Append("  Tr: ").Append(Tr).Append("\n");
-        sb.Append("  Uk: ").Append(Uk).Append("\n");
-        sb.Append("  Vi: ").Append(Vi).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class StringMap {\n");
+        _ = sb.Append("  En: ").Append(En).Append("\n");
+        _ = sb.Append("  Ar: ").Append(Ar).Append("\n");
+        _ = sb.Append("  Bs: ").Append(Bs).Append("\n");
+        _ = sb.Append("  Bg: ").Append(Bg).Append("\n");
+        _ = sb.Append("  Ca: ").Append(Ca).Append("\n");
+        _ = sb.Append("  ZhHans: ").Append(ZhHans).Append("\n");
+        _ = sb.Append("  ZhHant: ").Append(ZhHant).Append("\n");
+        _ = sb.Append("  Zh: ").Append(Zh).Append("\n");
+        _ = sb.Append("  Hr: ").Append(Hr).Append("\n");
+        _ = sb.Append("  Cs: ").Append(Cs).Append("\n");
+        _ = sb.Append("  Da: ").Append(Da).Append("\n");
+        _ = sb.Append("  Nl: ").Append(Nl).Append("\n");
+        _ = sb.Append("  Et: ").Append(Et).Append("\n");
+        _ = sb.Append("  Fi: ").Append(Fi).Append("\n");
+        _ = sb.Append("  Fr: ").Append(Fr).Append("\n");
+        _ = sb.Append("  Ka: ").Append(Ka).Append("\n");
+        _ = sb.Append("  De: ").Append(De).Append("\n");
+        _ = sb.Append("  El: ").Append(El).Append("\n");
+        _ = sb.Append("  Hi: ").Append(Hi).Append("\n");
+        _ = sb.Append("  He: ").Append(He).Append("\n");
+        _ = sb.Append("  Hu: ").Append(Hu).Append("\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  It: ").Append(It).Append("\n");
+        _ = sb.Append("  Ja: ").Append(Ja).Append("\n");
+        _ = sb.Append("  Ko: ").Append(Ko).Append("\n");
+        _ = sb.Append("  Lv: ").Append(Lv).Append("\n");
+        _ = sb.Append("  Lt: ").Append(Lt).Append("\n");
+        _ = sb.Append("  Ms: ").Append(Ms).Append("\n");
+        _ = sb.Append("  Nb: ").Append(Nb).Append("\n");
+        _ = sb.Append("  Pl: ").Append(Pl).Append("\n");
+        _ = sb.Append("  Fa: ").Append(Fa).Append("\n");
+        _ = sb.Append("  Pt: ").Append(Pt).Append("\n");
+        _ = sb.Append("  Pa: ").Append(Pa).Append("\n");
+        _ = sb.Append("  Ro: ").Append(Ro).Append("\n");
+        _ = sb.Append("  Ru: ").Append(Ru).Append("\n");
+        _ = sb.Append("  Sr: ").Append(Sr).Append("\n");
+        _ = sb.Append("  Sk: ").Append(Sk).Append("\n");
+        _ = sb.Append("  Es: ").Append(Es).Append("\n");
+        _ = sb.Append("  Sv: ").Append(Sv).Append("\n");
+        _ = sb.Append("  Th: ").Append(Th).Append("\n");
+        _ = sb.Append("  Tr: ").Append(Tr).Append("\n");
+        _ = sb.Append("  Uk: ").Append(Uk).Append("\n");
+        _ = sb.Append("  Vi: ").Append(Vi).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

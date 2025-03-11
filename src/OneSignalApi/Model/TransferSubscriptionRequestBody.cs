@@ -35,7 +35,7 @@ public partial class TransferSubscriptionRequestBody : IEquatable<TransferSubscr
     /// Initializes a new instance of the <see cref="TransferSubscriptionRequestBody" /> class.
     /// </summary>
     /// <param name="identity">identity.</param>
-    public TransferSubscriptionRequestBody(Dictionary<string, Object> identity = default(Dictionary<string, Object>)) => this.Identity = identity;
+    public TransferSubscriptionRequestBody(Dictionary<string, Object> identity = default) => this.Identity = identity;
 
     /// <summary>
     /// Gets or Sets Identity
@@ -50,9 +50,9 @@ public partial class TransferSubscriptionRequestBody : IEquatable<TransferSubscr
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class TransferSubscriptionRequestBody {\n");
-        sb.Append("  Identity: ").Append(Identity).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class TransferSubscriptionRequestBody {\n");
+        _ = sb.Append("  Identity: ").Append(Identity).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

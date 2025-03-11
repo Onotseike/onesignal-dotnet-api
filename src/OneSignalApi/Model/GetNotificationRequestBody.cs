@@ -64,7 +64,7 @@ public partial class GetNotificationRequestBody : IEquatable<GetNotificationRequ
     /// <param name="events">-&gt; \&quot;sent\&quot; - All the devices by player_id that were sent the specified notification_id.  Notifications targeting under 1000 recipients will not have \&quot;sent\&quot; events recorded, but will show \&quot;clicked\&quot; events. \&quot;clicked\&quot; - All the devices by &#x60;player_id&#x60; that clicked the specified notification_id..</param>
     /// <param name="email">The email address you would like the report sent..</param>
     /// <param name="appId">appId.</param>
-    public GetNotificationRequestBody(EventsEnum? events = default(EventsEnum?), string email = default(string), string appId = default(string))
+    public GetNotificationRequestBody(EventsEnum? events = default, string email = default, string appId = default)
     {
         this.Events = events;
         this.Email = email;
@@ -91,11 +91,11 @@ public partial class GetNotificationRequestBody : IEquatable<GetNotificationRequ
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class GetNotificationRequestBody {\n");
-        sb.Append("  Events: ").Append(Events).Append("\n");
-        sb.Append("  Email: ").Append(Email).Append("\n");
-        sb.Append("  AppId: ").Append(AppId).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class GetNotificationRequestBody {\n");
+        _ = sb.Append("  Events: ").Append(Events).Append("\n");
+        _ = sb.Append("  Email: ").Append(Email).Append("\n");
+        _ = sb.Append("  AppId: ").Append(AppId).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

@@ -35,7 +35,7 @@ public partial class GenericError : IEquatable<GenericError>, IValidatableObject
     /// Initializes a new instance of the <see cref="GenericError" /> class.
     /// </summary>
     /// <param name="errors">errors.</param>
-    public GenericError(List<GenericErrorErrorsInner> errors = default(List<GenericErrorErrorsInner>)) => this.Errors = errors;
+    public GenericError(List<GenericErrorErrorsInner> errors = default) => this.Errors = errors;
 
     /// <summary>
     /// Gets or Sets Errors
@@ -50,9 +50,9 @@ public partial class GenericError : IEquatable<GenericError>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class GenericError {\n");
-        sb.Append("  Errors: ").Append(Errors).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class GenericError {\n");
+        _ = sb.Append("  Errors: ").Append(Errors).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

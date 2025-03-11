@@ -82,7 +82,7 @@ public partial class App : IEquatable<App>, IValidatableObject
     /// <param name="siteName">All Browsers (Recommended): The Site Name. Requires both chrome_web_origin and safari_site_origin to be set to add or update it..</param>
     /// <param name="organizationId">The Id of the Organization you would like to add this app to..</param>
     /// <param name="additionalDataIsRootPayload">iOS: Notification data (additional data) values will be added to the root of the apns payload when sent to the device.  Ignore if you&#39;re not using any other plugins, or not using OneSignal SDK methods to read the payload..</param>
-    public App(string name = default(string), string androidGcmSenderId = default(string), string gcmKey = default(string), string chromeWebOrigin = default(string), string chromeKey = default(string), string chromeWebDefaultNotificationIcon = default(string), string chromeWebSubDomain = default(string), ApnsEnvEnum? apnsEnv = default(ApnsEnvEnum?), string apnsP12 = default(string), string apnsP12Password = default(string), string safariApnsP12 = default(string), string safariApnsP12Password = default(string), string apnsKeyId = default(string), string apnsTeamId = default(string), string apnsBundleId = default(string), string apnsP8 = default(string), string safariSiteOrigin = default(string), string safariIcon256256 = default(string), string siteName = default(string), string organizationId = default(string), bool additionalDataIsRootPayload = default(bool))
+    public App(string name = default, string androidGcmSenderId = default, string gcmKey = default, string chromeWebOrigin = default, string chromeKey = default, string chromeWebDefaultNotificationIcon = default, string chromeWebSubDomain = default, ApnsEnvEnum? apnsEnv = default, string apnsP12 = default, string apnsP12Password = default, string safariApnsP12 = default, string safariApnsP12Password = default, string apnsKeyId = default, string apnsTeamId = default, string apnsBundleId = default, string apnsP8 = default, string safariSiteOrigin = default, string safariIcon256256 = default, string siteName = default, string organizationId = default, bool additionalDataIsRootPayload = default)
     {
         this.Name = name;
         this.AndroidGcmSenderId = androidGcmSenderId;
@@ -397,42 +397,42 @@ public partial class App : IEquatable<App>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class App {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Name: ").Append(Name).Append("\n");
-        sb.Append("  Players: ").Append(Players).Append("\n");
-        sb.Append("  MessageablePlayers: ").Append(MessageablePlayers).Append("\n");
-        sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
-        sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
-        sb.Append("  AndroidGcmSenderId: ").Append(AndroidGcmSenderId).Append("\n");
-        sb.Append("  GcmKey: ").Append(GcmKey).Append("\n");
-        sb.Append("  ChromeWebOrigin: ").Append(ChromeWebOrigin).Append("\n");
-        sb.Append("  ChromeKey: ").Append(ChromeKey).Append("\n");
-        sb.Append("  ChromeWebDefaultNotificationIcon: ").Append(ChromeWebDefaultNotificationIcon).Append("\n");
-        sb.Append("  ChromeWebSubDomain: ").Append(ChromeWebSubDomain).Append("\n");
-        sb.Append("  ApnsEnv: ").Append(ApnsEnv).Append("\n");
-        sb.Append("  ApnsP12: ").Append(ApnsP12).Append("\n");
-        sb.Append("  ApnsP12Password: ").Append(ApnsP12Password).Append("\n");
-        sb.Append("  ApnsCertificates: ").Append(ApnsCertificates).Append("\n");
-        sb.Append("  SafariApnsCertificates: ").Append(SafariApnsCertificates).Append("\n");
-        sb.Append("  SafariApnsP12: ").Append(SafariApnsP12).Append("\n");
-        sb.Append("  SafariApnsP12Password: ").Append(SafariApnsP12Password).Append("\n");
-        sb.Append("  ApnsKeyId: ").Append(ApnsKeyId).Append("\n");
-        sb.Append("  ApnsTeamId: ").Append(ApnsTeamId).Append("\n");
-        sb.Append("  ApnsBundleId: ").Append(ApnsBundleId).Append("\n");
-        sb.Append("  ApnsP8: ").Append(ApnsP8).Append("\n");
-        sb.Append("  SafariSiteOrigin: ").Append(SafariSiteOrigin).Append("\n");
-        sb.Append("  SafariPushId: ").Append(SafariPushId).Append("\n");
-        sb.Append("  SafariIcon1616: ").Append(SafariIcon1616).Append("\n");
-        sb.Append("  SafariIcon3232: ").Append(SafariIcon3232).Append("\n");
-        sb.Append("  SafariIcon6464: ").Append(SafariIcon6464).Append("\n");
-        sb.Append("  SafariIcon128128: ").Append(SafariIcon128128).Append("\n");
-        sb.Append("  SafariIcon256256: ").Append(SafariIcon256256).Append("\n");
-        sb.Append("  SiteName: ").Append(SiteName).Append("\n");
-        sb.Append("  BasicAuthKey: ").Append(BasicAuthKey).Append("\n");
-        sb.Append("  OrganizationId: ").Append(OrganizationId).Append("\n");
-        sb.Append("  AdditionalDataIsRootPayload: ").Append(AdditionalDataIsRootPayload).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class App {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Name: ").Append(Name).Append("\n");
+        _ = sb.Append("  Players: ").Append(Players).Append("\n");
+        _ = sb.Append("  MessageablePlayers: ").Append(MessageablePlayers).Append("\n");
+        _ = sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
+        _ = sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+        _ = sb.Append("  AndroidGcmSenderId: ").Append(AndroidGcmSenderId).Append("\n");
+        _ = sb.Append("  GcmKey: ").Append(GcmKey).Append("\n");
+        _ = sb.Append("  ChromeWebOrigin: ").Append(ChromeWebOrigin).Append("\n");
+        _ = sb.Append("  ChromeKey: ").Append(ChromeKey).Append("\n");
+        _ = sb.Append("  ChromeWebDefaultNotificationIcon: ").Append(ChromeWebDefaultNotificationIcon).Append("\n");
+        _ = sb.Append("  ChromeWebSubDomain: ").Append(ChromeWebSubDomain).Append("\n");
+        _ = sb.Append("  ApnsEnv: ").Append(ApnsEnv).Append("\n");
+        _ = sb.Append("  ApnsP12: ").Append(ApnsP12).Append("\n");
+        _ = sb.Append("  ApnsP12Password: ").Append(ApnsP12Password).Append("\n");
+        _ = sb.Append("  ApnsCertificates: ").Append(ApnsCertificates).Append("\n");
+        _ = sb.Append("  SafariApnsCertificates: ").Append(SafariApnsCertificates).Append("\n");
+        _ = sb.Append("  SafariApnsP12: ").Append(SafariApnsP12).Append("\n");
+        _ = sb.Append("  SafariApnsP12Password: ").Append(SafariApnsP12Password).Append("\n");
+        _ = sb.Append("  ApnsKeyId: ").Append(ApnsKeyId).Append("\n");
+        _ = sb.Append("  ApnsTeamId: ").Append(ApnsTeamId).Append("\n");
+        _ = sb.Append("  ApnsBundleId: ").Append(ApnsBundleId).Append("\n");
+        _ = sb.Append("  ApnsP8: ").Append(ApnsP8).Append("\n");
+        _ = sb.Append("  SafariSiteOrigin: ").Append(SafariSiteOrigin).Append("\n");
+        _ = sb.Append("  SafariPushId: ").Append(SafariPushId).Append("\n");
+        _ = sb.Append("  SafariIcon1616: ").Append(SafariIcon1616).Append("\n");
+        _ = sb.Append("  SafariIcon3232: ").Append(SafariIcon3232).Append("\n");
+        _ = sb.Append("  SafariIcon6464: ").Append(SafariIcon6464).Append("\n");
+        _ = sb.Append("  SafariIcon128128: ").Append(SafariIcon128128).Append("\n");
+        _ = sb.Append("  SafariIcon256256: ").Append(SafariIcon256256).Append("\n");
+        _ = sb.Append("  SiteName: ").Append(SiteName).Append("\n");
+        _ = sb.Append("  BasicAuthKey: ").Append(BasicAuthKey).Append("\n");
+        _ = sb.Append("  OrganizationId: ").Append(OrganizationId).Append("\n");
+        _ = sb.Append("  AdditionalDataIsRootPayload: ").Append(AdditionalDataIsRootPayload).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

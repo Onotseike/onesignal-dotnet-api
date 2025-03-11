@@ -42,7 +42,7 @@ public partial class PlatformDeliveryData : IEquatable<PlatformDeliveryData>, IV
     /// <param name="ios">ios.</param>
     /// <param name="sms">sms.</param>
     /// <param name="email">email.</param>
-    public PlatformDeliveryData(DeliveryData edgeWebPush = default(DeliveryData), DeliveryData chromeWebPush = default(DeliveryData), DeliveryData firefoxWebPush = default(DeliveryData), DeliveryData safariWebPush = default(DeliveryData), DeliveryData android = default(DeliveryData), DeliveryData ios = default(DeliveryData), DeliveryData sms = default(DeliveryData), DeliveryData email = default(DeliveryData))
+    public PlatformDeliveryData(DeliveryData edgeWebPush = default, DeliveryData chromeWebPush = default, DeliveryData firefoxWebPush = default, DeliveryData safariWebPush = default, DeliveryData android = default, DeliveryData ios = default, DeliveryData sms = default, DeliveryData email = default)
     {
         this.EdgeWebPush = edgeWebPush;
         this.ChromeWebPush = chromeWebPush;
@@ -109,16 +109,16 @@ public partial class PlatformDeliveryData : IEquatable<PlatformDeliveryData>, IV
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class PlatformDeliveryData {\n");
-        sb.Append("  EdgeWebPush: ").Append(EdgeWebPush).Append("\n");
-        sb.Append("  ChromeWebPush: ").Append(ChromeWebPush).Append("\n");
-        sb.Append("  FirefoxWebPush: ").Append(FirefoxWebPush).Append("\n");
-        sb.Append("  SafariWebPush: ").Append(SafariWebPush).Append("\n");
-        sb.Append("  Android: ").Append(Android).Append("\n");
-        sb.Append("  Ios: ").Append(Ios).Append("\n");
-        sb.Append("  Sms: ").Append(Sms).Append("\n");
-        sb.Append("  Email: ").Append(Email).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class PlatformDeliveryData {\n");
+        _ = sb.Append("  EdgeWebPush: ").Append(EdgeWebPush).Append("\n");
+        _ = sb.Append("  ChromeWebPush: ").Append(ChromeWebPush).Append("\n");
+        _ = sb.Append("  FirefoxWebPush: ").Append(FirefoxWebPush).Append("\n");
+        _ = sb.Append("  SafariWebPush: ").Append(SafariWebPush).Append("\n");
+        _ = sb.Append("  Android: ").Append(Android).Append("\n");
+        _ = sb.Append("  Ios: ").Append(Ios).Append("\n");
+        _ = sb.Append("  Sms: ").Append(Sms).Append("\n");
+        _ = sb.Append("  Email: ").Append(Email).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 

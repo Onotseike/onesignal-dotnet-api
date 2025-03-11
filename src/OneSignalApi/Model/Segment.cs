@@ -42,7 +42,7 @@ public partial class Segment : IEquatable<Segment>, IValidatableObject
     /// <param name="id">UUID of the segment.  If left empty, it will be assigned automaticaly..</param>
     /// <param name="name">Name of the segment.  You&#39;ll see this name on the Web UI. (required).</param>
     /// <param name="filters">Filter or operators the segment will have.  For a list of available filters with details, please see Send to Users Based on Filters. (required).</param>
-    public Segment(string id = default(string), string name = default(string), List<FilterExpressions> filters = default(List<FilterExpressions>))
+    public Segment(string id = default, string name = default, List<FilterExpressions> filters = default)
     {
         // to ensure "name" is required (not null)
         if (name == null)
@@ -87,11 +87,11 @@ public partial class Segment : IEquatable<Segment>, IValidatableObject
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append("class Segment {\n");
-        sb.Append("  Id: ").Append(Id).Append("\n");
-        sb.Append("  Name: ").Append(Name).Append("\n");
-        sb.Append("  Filters: ").Append(Filters).Append("\n");
-        sb.Append("}\n");
+        _ = sb.Append("class Segment {\n");
+        _ = sb.Append("  Id: ").Append(Id).Append("\n");
+        _ = sb.Append("  Name: ").Append(Name).Append("\n");
+        _ = sb.Append("  Filters: ").Append(Filters).Append("\n");
+        _ = sb.Append("}\n");
         return sb.ToString();
     }
 
