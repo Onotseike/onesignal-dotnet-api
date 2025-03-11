@@ -64,10 +64,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="Operator" /> class.
         /// </summary>
         /// <param name="_operator">Strictly, this must be either &#x60;\&quot;OR\&quot;&#x60;, or &#x60;\&quot;AND\&quot;&#x60;.  It can be used to compose Filters as part of a Filters object..</param>
-        public Operator(OperatorEnum? _operator = default(OperatorEnum?))
-        {
-            this._Operator = _operator;
-        }
+        public Operator(OperatorEnum? _operator = default(OperatorEnum?)) => this._Operator = _operator;
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -86,20 +83,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Operator);
-        }
+        public override bool Equals(object input) => this.Equals(input as Operator);
 
         /// <summary>
         /// Returns true if Operator instances are equal

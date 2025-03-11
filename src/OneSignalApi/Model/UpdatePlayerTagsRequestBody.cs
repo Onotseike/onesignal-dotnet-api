@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="UpdatePlayerTagsRequestBody" /> class.
         /// </summary>
         /// <param name="tags">Custom tags for the device record.  Only support string key value pairs.  Does not support arrays or other nested objects.  Example &#x60;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;this\&quot;:\&quot;that\&quot;}&#x60;. Limitations: - 100 tags per call - Android SDK users: tags cannot be removed or changed via API if set through SDK sendTag methods. Recommended to only tag devices with 1 kilobyte of ata Please consider using your own Database to save more than 1 kilobyte of data.  See: Internal Database &amp; CRM .</param>
-        public UpdatePlayerTagsRequestBody(Object tags = default(Object))
-        {
-            this.Tags = tags;
-        }
+        public UpdatePlayerTagsRequestBody(Object tags = default(Object)) => this.Tags = tags;
 
         /// <summary>
         /// Custom tags for the device record.  Only support string key value pairs.  Does not support arrays or other nested objects.  Example &#x60;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;this\&quot;:\&quot;that\&quot;}&#x60;. Limitations: - 100 tags per call - Android SDK users: tags cannot be removed or changed via API if set through SDK sendTag methods. Recommended to only tag devices with 1 kilobyte of ata Please consider using your own Database to save more than 1 kilobyte of data.  See: Internal Database &amp; CRM 
@@ -65,20 +62,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UpdatePlayerTagsRequestBody);
-        }
+        public override bool Equals(object input) => this.Equals(input as UpdatePlayerTagsRequestBody);
 
         /// <summary>
         /// Returns true if UpdatePlayerTagsRequestBody instances are equal

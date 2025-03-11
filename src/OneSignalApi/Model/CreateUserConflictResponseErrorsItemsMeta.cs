@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="CreateUserConflictResponseErrorsItemsMeta" /> class.
         /// </summary>
         /// <param name="conflictingAliases">conflictingAliases.</param>
-        public CreateUserConflictResponseErrorsItemsMeta(Object conflictingAliases = default(Object))
-        {
-            this.ConflictingAliases = conflictingAliases;
-        }
+        public CreateUserConflictResponseErrorsItemsMeta(Object conflictingAliases = default(Object)) => this.ConflictingAliases = conflictingAliases;
 
         /// <summary>
         /// Gets or Sets ConflictingAliases
@@ -64,20 +61,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CreateUserConflictResponseErrorsItemsMeta);
-        }
+        public override bool Equals(object input) => this.Equals(input as CreateUserConflictResponseErrorsItemsMeta);
 
         /// <summary>
         /// Returns true if CreateUserConflictResponseErrorsItemsMeta instances are equal

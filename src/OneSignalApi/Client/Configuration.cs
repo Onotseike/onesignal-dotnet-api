@@ -408,10 +408,7 @@ namespace OneSignalApi.Client
         /// </summary>
         /// <param name="index">Array index of the server settings.</param>
         /// <return>The server URL.</return>
-        public string GetServerUrl(int index)
-        {
-            return GetServerUrl(Servers, index, null);
-        }
+        public string GetServerUrl(int index) => GetServerUrl(Servers, index, null);
 
         /// <summary>
         /// Returns URL based on server settings.
@@ -419,10 +416,7 @@ namespace OneSignalApi.Client
         /// <param name="index">Array index of the server settings.</param>
         /// <param name="inputVariables">Dictionary of the variables and the corresponding values.</param>
         /// <return>The server URL.</return>
-        public string GetServerUrl(int index, Dictionary<string, string> inputVariables)
-        {
-            return GetServerUrl(Servers, index, inputVariables);
-        }
+        public string GetServerUrl(int index, Dictionary<string, string> inputVariables) => GetServerUrl(Servers, index, inputVariables);
 
         /// <summary>
         /// Returns URL based on operation server settings.
@@ -430,10 +424,7 @@ namespace OneSignalApi.Client
         /// <param name="operation">Operation associated with the request path.</param>
         /// <param name="index">Array index of the server settings.</param>
         /// <return>The operation server URL.</return>
-        public string GetOperationServerUrl(string operation, int index)
-        {
-            return GetOperationServerUrl(operation, index, null);
-        }
+        public string GetOperationServerUrl(string operation, int index) => GetOperationServerUrl(operation, index, null);
 
         /// <summary>
         /// Returns URL based on operation server settings.
@@ -528,20 +519,14 @@ namespace OneSignalApi.Client
         /// <param name="key">Api Key name.</param>
         /// <param name="value">Api Key value.</param>
         /// <returns></returns>
-        public void AddApiKey(string key, string value)
-        {
-            ApiKey[key] = value;
-        }
+        public void AddApiKey(string key, string value) => ApiKey[key] = value;
 
         /// <summary>
         /// Sets the API key prefix.
         /// </summary>
         /// <param name="key">Api Key name.</param>
         /// <param name="value">Api Key value.</param>
-        public void AddApiKeyPrefix(string key, string value)
-        {
-            ApiKeyPrefix[key] = value;
-        }
+        public void AddApiKeyPrefix(string key, string value) => ApiKeyPrefix[key] = value;
 
         #endregion Methods
 

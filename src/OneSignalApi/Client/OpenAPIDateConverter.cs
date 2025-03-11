@@ -21,10 +21,8 @@ namespace OneSignalApi.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAPIDateConverter" /> class.
         /// </summary>
-        public OpenAPIDateConverter()
-        {
+        public OpenAPIDateConverter() =>
             // full-date   = date-fullyear "-" date-month "-" date-mday
             DateTimeFormat = "yyyy-MM-dd";
-        }
     }
 }

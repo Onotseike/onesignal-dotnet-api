@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="InlineResponse2003" /> class.
         /// </summary>
         /// <param name="inAppMessages">inAppMessages.</param>
-        public InlineResponse2003(List<Object> inAppMessages = default(List<Object>))
-        {
-            this.InAppMessages = inAppMessages;
-        }
+        public InlineResponse2003(List<Object> inAppMessages = default(List<Object>)) => this.InAppMessages = inAppMessages;
 
         /// <summary>
         /// Gets or Sets InAppMessages
@@ -64,20 +61,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as InlineResponse2003);
-        }
+        public override bool Equals(object input) => this.Equals(input as InlineResponse2003);
 
         /// <summary>
         /// Returns true if InlineResponse2003 instances are equal

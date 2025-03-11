@@ -119,10 +119,7 @@ namespace OneSignalApi.Model
         /// Returns false as Id should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return false;
-        }
+        public bool ShouldSerializeId() => false;
         /// <summary>
         /// The name of your app, as displayed on your apps list on the dashboard.  This can be renamed.
         /// </summary>
@@ -140,10 +137,7 @@ namespace OneSignalApi.Model
         /// Returns false as Players should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePlayers()
-        {
-            return false;
-        }
+        public bool ShouldSerializePlayers() => false;
         /// <summary>
         /// Gets or Sets MessageablePlayers
         /// </summary>
@@ -154,10 +148,7 @@ namespace OneSignalApi.Model
         /// Returns false as MessageablePlayers should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMessageablePlayers()
-        {
-            return false;
-        }
+        public bool ShouldSerializeMessageablePlayers() => false;
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
@@ -168,10 +159,7 @@ namespace OneSignalApi.Model
         /// Returns false as UpdatedAt should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUpdatedAt()
-        {
-            return false;
-        }
+        public bool ShouldSerializeUpdatedAt() => false;
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -182,10 +170,7 @@ namespace OneSignalApi.Model
         /// Returns false as CreatedAt should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCreatedAt()
-        {
-            return false;
-        }
+        public bool ShouldSerializeCreatedAt() => false;
         /// <summary>
         /// Android: Your Google Project number.  Also known as Sender ID.
         /// </summary>
@@ -252,10 +237,7 @@ namespace OneSignalApi.Model
         /// Returns false as ApnsCertificates should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeApnsCertificates()
-        {
-            return false;
-        }
+        public bool ShouldSerializeApnsCertificates() => false;
         /// <summary>
         /// Gets or Sets SafariApnsCertificates
         /// </summary>
@@ -266,10 +248,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariApnsCertificates should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariApnsCertificates()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariApnsCertificates() => false;
         /// <summary>
         /// Safari: Your apple push notification p12 certificate file for Safari Push Notifications, converted to a string and Base64 encoded.
         /// </summary>
@@ -329,10 +308,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariPushId should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariPushId()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariPushId() => false;
         /// <summary>
         /// Gets or Sets SafariIcon1616
         /// </summary>
@@ -343,10 +319,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariIcon1616 should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariIcon1616()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariIcon1616() => false;
         /// <summary>
         /// Gets or Sets SafariIcon3232
         /// </summary>
@@ -357,10 +330,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariIcon3232 should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariIcon3232()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariIcon3232() => false;
         /// <summary>
         /// Gets or Sets SafariIcon6464
         /// </summary>
@@ -371,10 +341,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariIcon6464 should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariIcon6464()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariIcon6464() => false;
         /// <summary>
         /// Gets or Sets SafariIcon128128
         /// </summary>
@@ -385,10 +352,7 @@ namespace OneSignalApi.Model
         /// Returns false as SafariIcon128128 should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSafariIcon128128()
-        {
-            return false;
-        }
+        public bool ShouldSerializeSafariIcon128128() => false;
         /// <summary>
         /// Safari: A url for a 256x256 png notification icon. This is the only Safari icon URL you need to provide.
         /// </summary>
@@ -413,10 +377,7 @@ namespace OneSignalApi.Model
         /// Returns false as BasicAuthKey should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBasicAuthKey()
-        {
-            return false;
-        }
+        public bool ShouldSerializeBasicAuthKey() => false;
         /// <summary>
         /// The Id of the Organization you would like to add this app to.
         /// </summary>
@@ -481,20 +442,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as App);
-        }
+        public override bool Equals(object input) => this.Equals(input as App);
 
         /// <summary>
         /// Returns true if App instances are equal

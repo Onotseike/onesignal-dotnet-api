@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="ExportEventsSuccessResponse" /> class.
         /// </summary>
         /// <param name="csvFileUrl">csvFileUrl.</param>
-        public ExportEventsSuccessResponse(string csvFileUrl = default(string))
-        {
-            this.CsvFileUrl = csvFileUrl;
-        }
+        public ExportEventsSuccessResponse(string csvFileUrl = default(string)) => this.CsvFileUrl = csvFileUrl;
 
         /// <summary>
         /// Gets or Sets CsvFileUrl
@@ -64,20 +61,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ExportEventsSuccessResponse);
-        }
+        public override bool Equals(object input) => this.Equals(input as ExportEventsSuccessResponse);
 
         /// <summary>
         /// Returns true if ExportEventsSuccessResponse instances are equal

@@ -105,10 +105,7 @@ namespace OneSignalApi.Model
         /// Returns false as Id should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return false;
-        }
+        public bool ShouldSerializeId() => false;
         /// <summary>
         /// If true, this is the equivalent of a user being Unsubscribed
         /// </summary>
@@ -120,10 +117,7 @@ namespace OneSignalApi.Model
         /// Returns false as InvalidIdentifier should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeInvalidIdentifier()
-        {
-            return false;
-        }
+        public bool ShouldSerializeInvalidIdentifier() => false;
         /// <summary>
         /// Gets or Sets AppId
         /// </summary>
@@ -341,20 +335,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Player);
-        }
+        public override bool Equals(object input) => this.Equals(input as Player);
 
         /// <summary>
         /// Returns true if Player instances are equal

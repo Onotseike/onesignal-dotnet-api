@@ -42,10 +42,7 @@ namespace OneSignalApi.Client
         {
         }
 
-        static GlobalConfiguration()
-        {
-            Instance = new GlobalConfiguration();
-        }
+        static GlobalConfiguration() => Instance = new GlobalConfiguration();
 
         #endregion Constructors
 

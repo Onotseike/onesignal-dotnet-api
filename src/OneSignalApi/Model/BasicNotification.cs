@@ -95,10 +95,7 @@ namespace OneSignalApi.Model
         /// Returns false as Aggregation should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAggregation()
-        {
-            return false;
-        }
+        public bool ShouldSerializeAggregation() => false;
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicNotification" /> class.
         /// </summary>
@@ -434,10 +431,7 @@ namespace OneSignalApi.Model
         /// Returns false as Value should not be serialized given that it's read-only.
         /// </summary>
         /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeValue()
-        {
-            return false;
-        }
+        public bool ShouldSerializeValue() => false;
         /// <summary>
         /// Required for SMS Messages. An identifier for tracking message within the OneSignal dashboard or export analytics. Not shown to end user.
         /// </summary>
@@ -1187,20 +1181,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BasicNotification);
-        }
+        public override bool Equals(object input) => this.Equals(input as BasicNotification);
 
         /// <summary>
         /// Returns true if BasicNotification instances are equal

@@ -112,10 +112,7 @@ namespace OneSignalApi.Client
         /// </summary>
         /// <param name="text">string to be encoded.</param>
         /// <returns>Encoded string.</returns>
-        public static string Base64Encode(string text)
-        {
-            return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(text));
-        }
+        public static string Base64Encode(string text) => Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(text));
 
         /// <summary>
         /// Convert stream to byte array

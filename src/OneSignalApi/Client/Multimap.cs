@@ -33,19 +33,13 @@ namespace OneSignalApi.Client
         /// <summary>
         /// Empty Constructor.
         /// </summary>
-        public Multimap()
-        {
-            _dictionary = new Dictionary<TKey, IList<TValue>>();
-        }
+        public Multimap() => _dictionary = new Dictionary<TKey, IList<TValue>>();
 
         /// <summary>
         /// Constructor with comparer.
         /// </summary>
         /// <param name="comparer"></param>
-        public Multimap(IEqualityComparer<TKey> comparer)
-        {
-            _dictionary = new Dictionary<TKey, IList<TValue>>(comparer);
-        }
+        public Multimap(IEqualityComparer<TKey> comparer) => _dictionary = new Dictionary<TKey, IList<TValue>>(comparer);
 
         #endregion Constructors
 
@@ -55,19 +49,13 @@ namespace OneSignalApi.Client
         /// To get the enumerator.
         /// </summary>
         /// <returns>Enumerator</returns>
-        public IEnumerator<KeyValuePair<TKey, IList<TValue>>> GetEnumerator()
-        {
-            return _dictionary.GetEnumerator();
-        }
+        public IEnumerator<KeyValuePair<TKey, IList<TValue>>> GetEnumerator() => _dictionary.GetEnumerator();
 
         /// <summary>
         /// To get the enumerator.
         /// </summary>
         /// <returns>Enumerator</returns>
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return _dictionary.GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => _dictionary.GetEnumerator();
 
         #endregion Enumerators
 
@@ -98,10 +86,7 @@ namespace OneSignalApi.Client
         /// <summary>
         /// Clear Multimap
         /// </summary>
-        public void Clear()
-        {
-            _dictionary.Clear();
-        }
+        public void Clear() => _dictionary.Clear();
 
         /// <summary>
         /// Determines whether Multimap contains the specified item.
@@ -109,10 +94,7 @@ namespace OneSignalApi.Client
         /// <param name="item">Key value pair</param>
         /// <exception cref="NotImplementedException">Method needs to be implemented</exception>
         /// <returns>true if the Multimap contains the item; otherwise, false.</returns>
-        public bool Contains(KeyValuePair<TKey, IList<TValue>> item)
-        {
-            throw new NotImplementedException();
-        }
+        public bool Contains(KeyValuePair<TKey, IList<TValue>> item) => throw new NotImplementedException();
 
         /// <summary>
         ///  Copy items of the Multimap to an array,
@@ -122,10 +104,7 @@ namespace OneSignalApi.Client
         ///     from Multimap. The array must have zero-based indexing.</param>
         /// <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
         /// <exception cref="NotImplementedException">Method needs to be implemented</exception>
-        public void CopyTo(KeyValuePair<TKey, IList<TValue>>[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
+        public void CopyTo(KeyValuePair<TKey, IList<TValue>>[] array, int arrayIndex) => throw new NotImplementedException();
 
         /// <summary>
         /// Removes the specified item from the Multimap.
@@ -133,10 +112,7 @@ namespace OneSignalApi.Client
         /// <param name="item">Key value pair</param>
         /// <returns>true if the item is successfully removed; otherwise, false.</returns>
         /// <exception cref="NotImplementedException">Method needs to be implemented</exception>
-        public bool Remove(KeyValuePair<TKey, IList<TValue>> item)
-        {
-            throw new NotImplementedException();
-        }
+        public bool Remove(KeyValuePair<TKey, IList<TValue>> item) => throw new NotImplementedException();
 
         /// <summary>
         /// Gets the number of items contained in the Multimap.
@@ -177,20 +153,14 @@ namespace OneSignalApi.Client
         /// <param name="key">The key to locate in the Multimap.</param>
         /// <returns>true if the Multimap contains an item with
         ///     the key; otherwise, false.</returns>
-        public bool ContainsKey(TKey key)
-        {
-            return _dictionary.ContainsKey(key);
-        }
+        public bool ContainsKey(TKey key) => _dictionary.ContainsKey(key);
 
         /// <summary>
         /// Removes item with the specified key from the Multimap.
         /// </summary>
         /// <param name="key">The key to locate in the Multimap.</param>
         /// <returns>true if the item is successfully removed; otherwise, false.</returns>
-        public bool Remove(TKey key)
-        {
-            return TryRemove(key, out var _);
-        }
+        public bool Remove(TKey key) => TryRemove(key, out var _);
 
         /// <summary>
         /// Gets the value associated with the specified key.
@@ -201,10 +171,7 @@ namespace OneSignalApi.Client
         ///     This parameter is passed uninitialized.</param>
         /// <returns> true if the object that implements Multimap contains
         ///     an item with the specified key; otherwise, false.</returns>
-        public bool TryGetValue(TKey key, out IList<TValue> value)
-        {
-            return _dictionary.TryGetValue(key, out value);
-        }
+        public bool TryGetValue(TKey key, out IList<TValue> value) => _dictionary.TryGetValue(key, out value);
 
         /// <summary>
         /// Gets or sets the item with the specified key.
@@ -234,10 +201,7 @@ namespace OneSignalApi.Client
         /// <param name="array">The one-dimensional System.Array that is the destination of the items copied
         ///     from Multimap. The System.Array must have zero-based indexing.</param>
         /// <param name="index">The zero-based index in array at which copying begins.</param>
-        public void CopyTo(Array array, int index)
-        {
-            ((ICollection)_dictionary).CopyTo(array, index);
-        }
+        public void CopyTo(Array array, int index) => ((ICollection)_dictionary).CopyTo(array, index);
 
         /// <summary>
         /// Adds an item with the provided key and value to the Multimap.

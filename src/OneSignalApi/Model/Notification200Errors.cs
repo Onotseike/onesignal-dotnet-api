@@ -92,20 +92,14 @@ namespace OneSignalApi.Model
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of InvalidIdentifierError</returns>
-        public InvalidIdentifierError GetInvalidIdentifierError()
-        {
-            return (InvalidIdentifierError)this.ActualInstance;
-        }
+        public InvalidIdentifierError GetInvalidIdentifierError() => (InvalidIdentifierError)this.ActualInstance;
 
         /// <summary>
         /// Get the actual instance of `List&lt;string&gt;`. If the actual instance is not `List&lt;string&gt;`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of List&lt;string&gt;</returns>
-        public List<string> GetListString()
-        {
-            return (List<string>)this.ActualInstance;
-        }
+        public List<string> GetListString() => (List<string>)this.ActualInstance;
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -124,10 +118,7 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
-        {
-            return JsonConvert.SerializeObject(this.ActualInstance, Notification200Errors.SerializerSettings);
-        }
+        public override string ToJson() => JsonConvert.SerializeObject(this.ActualInstance, Notification200Errors.SerializerSettings);
 
         /// <summary>
         /// Converts the JSON string into an instance of Notification200Errors
@@ -203,10 +194,7 @@ namespace OneSignalApi.Model
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Notification200Errors);
-        }
+        public override bool Equals(object input) => this.Equals(input as Notification200Errors);
 
         /// <summary>
         /// Returns true if Notification200Errors instances are equal
@@ -258,10 +246,7 @@ namespace OneSignalApi.Model
         /// <param name="writer">JSON writer</param>
         /// <param name="value">Object to be converted into a JSON string</param>
         /// <param name="serializer">JSON Serializer</param>
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            writer.WriteRawValue((string)(typeof(Notification200Errors).GetMethod("ToJson").Invoke(value, null)));
-        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) => writer.WriteRawValue((string)(typeof(Notification200Errors).GetMethod("ToJson").Invoke(value, null)));
 
         /// <summary>
         /// To convert a JSON string into an object
@@ -294,10 +279,7 @@ namespace OneSignalApi.Model
         /// </summary>
         /// <param name="objectType">Object type</param>
         /// <returns>True if the object can be converted</returns>
-        public override bool CanConvert(Type objectType)
-        {
-            return false;
-        }
+        public override bool CanConvert(Type objectType) => false;
     }
 
 }

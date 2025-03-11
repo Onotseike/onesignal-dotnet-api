@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="InlineResponse201" /> class.
         /// </summary>
         /// <param name="subscription">subscription.</param>
-        public InlineResponse201(SubscriptionObject subscription = default(SubscriptionObject))
-        {
-            this.Subscription = subscription;
-        }
+        public InlineResponse201(SubscriptionObject subscription = default(SubscriptionObject)) => this.Subscription = subscription;
 
         /// <summary>
         /// Gets or Sets Subscription
@@ -64,20 +61,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as InlineResponse201);
-        }
+        public override bool Equals(object input) => this.Equals(input as InlineResponse201);
 
         /// <summary>
         /// Returns true if InlineResponse201 instances are equal

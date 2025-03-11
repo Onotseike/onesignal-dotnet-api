@@ -2133,10 +2133,7 @@ namespace OneSignalApi.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public string GetBasePath()
-        {
-            return this.Configuration.BasePath;
-        }
+        public string GetBasePath() => this.Configuration.BasePath;
 
         /// <summary>
         /// Gets or sets the configuration object
@@ -2169,10 +2166,7 @@ namespace OneSignalApi.Api
         /// <param name="beginLiveActivityRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void BeginLiveActivity(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0)
-        {
-            BeginLiveActivityWithHttpInfo(appId, activityId, beginLiveActivityRequest);
-        }
+        public void BeginLiveActivity(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0) => BeginLiveActivityWithHttpInfo(appId, activityId, beginLiveActivityRequest);
 
         /// <summary>
         /// Start Live Activity Starts a Live Activity
@@ -2264,10 +2258,7 @@ namespace OneSignalApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await BeginLiveActivityWithHttpInfoAsync(appId, activityId, beginLiveActivityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
-        }
+        public async System.Threading.Tasks.Task BeginLiveActivityAsync(string appId, string activityId, BeginLiveActivityRequest beginLiveActivityRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await BeginLiveActivityWithHttpInfoAsync(appId, activityId, beginLiveActivityRequest, operationIndex, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
         /// Start Live Activity Starts a Live Activity
@@ -4118,10 +4109,7 @@ namespace OneSignalApi.Api
         /// <param name="subscriptionId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteSubscription(string appId, string subscriptionId, int operationIndex = 0)
-        {
-            DeleteSubscriptionWithHttpInfo(appId, subscriptionId);
-        }
+        public void DeleteSubscription(string appId, string subscriptionId, int operationIndex = 0) => DeleteSubscriptionWithHttpInfo(appId, subscriptionId);
 
         /// <summary>
         ///  Deletes the Subscription.
@@ -4203,10 +4191,7 @@ namespace OneSignalApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await DeleteSubscriptionWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
-        }
+        public async System.Threading.Tasks.Task DeleteSubscriptionAsync(string appId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await DeleteSubscriptionWithHttpInfoAsync(appId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
         ///  Deletes the Subscription.
@@ -4291,10 +4276,7 @@ namespace OneSignalApi.Api
         /// <param name="aliasId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteUser(string appId, string aliasLabel, string aliasId, int operationIndex = 0)
-        {
-            DeleteUserWithHttpInfo(appId, aliasLabel, aliasId);
-        }
+        public void DeleteUser(string appId, string aliasLabel, string aliasId, int operationIndex = 0) => DeleteUserWithHttpInfo(appId, aliasLabel, aliasId);
 
         /// <summary>
         ///  Removes the User identified by (:alias_label, :alias_id), and all Subscriptions and Aliases
@@ -4385,10 +4367,7 @@ namespace OneSignalApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await DeleteUserWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
-        }
+        public async System.Threading.Tasks.Task DeleteUserAsync(string appId, string aliasLabel, string aliasId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await DeleteUserWithHttpInfoAsync(appId, aliasLabel, aliasId, operationIndex, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
         ///  Removes the User identified by (:alias_label, :alias_id), and all Subscriptions and Aliases
@@ -4481,10 +4460,7 @@ namespace OneSignalApi.Api
         /// <param name="subscriptionId">Subscription ID</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void EndLiveActivity(string appId, string activityId, string subscriptionId, int operationIndex = 0)
-        {
-            EndLiveActivityWithHttpInfo(appId, activityId, subscriptionId);
-        }
+        public void EndLiveActivity(string appId, string activityId, string subscriptionId, int operationIndex = 0) => EndLiveActivityWithHttpInfo(appId, activityId, subscriptionId);
 
         /// <summary>
         /// Stop Live Activity Stops a Live Activity
@@ -4575,10 +4551,7 @@ namespace OneSignalApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await EndLiveActivityWithHttpInfoAsync(appId, activityId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
-        }
+        public async System.Threading.Tasks.Task EndLiveActivityAsync(string appId, string activityId, string subscriptionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await EndLiveActivityWithHttpInfoAsync(appId, activityId, subscriptionId, operationIndex, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
         /// Stop Live Activity Stops a Live Activity
@@ -8493,10 +8466,7 @@ namespace OneSignalApi.Api
         /// <param name="updateSubscriptionRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void UpdateSubscription(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0)
-        {
-            UpdateSubscriptionWithHttpInfo(appId, subscriptionId, updateSubscriptionRequestBody);
-        }
+        public void UpdateSubscription(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0) => UpdateSubscriptionWithHttpInfo(appId, subscriptionId, updateSubscriptionRequestBody);
 
         /// <summary>
         ///  Updates an existing Subscription’s properties.
@@ -8588,10 +8558,7 @@ namespace OneSignalApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await UpdateSubscriptionWithHttpInfoAsync(appId, subscriptionId, updateSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
-        }
+        public async System.Threading.Tasks.Task UpdateSubscriptionAsync(string appId, string subscriptionId, UpdateSubscriptionRequestBody updateSubscriptionRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) => await UpdateSubscriptionWithHttpInfoAsync(appId, subscriptionId, updateSubscriptionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
 
         /// <summary>
         ///  Updates an existing Subscription’s properties.

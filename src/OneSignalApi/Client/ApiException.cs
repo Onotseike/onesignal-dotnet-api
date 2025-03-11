@@ -46,10 +46,7 @@ namespace OneSignalApi.Client
         /// </summary>
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
-        public ApiException(int errorCode, string message) : base(message)
-        {
-            this.ErrorCode = errorCode;
-        }
+        public ApiException(int errorCode, string message) : base(message) => this.ErrorCode = errorCode;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiException"/> class.

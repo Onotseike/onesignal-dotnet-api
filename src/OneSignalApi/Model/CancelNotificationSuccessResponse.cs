@@ -36,10 +36,7 @@ namespace OneSignalApi.Model
         /// Initializes a new instance of the <see cref="CancelNotificationSuccessResponse" /> class.
         /// </summary>
         /// <param name="success">success.</param>
-        public CancelNotificationSuccessResponse(bool success = default(bool))
-        {
-            this.Success = success;
-        }
+        public CancelNotificationSuccessResponse(bool success = default(bool)) => this.Success = success;
 
         /// <summary>
         /// Gets or Sets Success
@@ -64,20 +61,14 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
-        }
+        public virtual string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CancelNotificationSuccessResponse);
-        }
+        public override bool Equals(object input) => this.Equals(input as CancelNotificationSuccessResponse);
 
         /// <summary>
         /// Returns true if CancelNotificationSuccessResponse instances are equal

@@ -91,20 +91,14 @@ namespace OneSignalApi.Model
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of PlayerNotificationTarget</returns>
-        public PlayerNotificationTarget GetPlayerNotificationTarget()
-        {
-            return (PlayerNotificationTarget)this.ActualInstance;
-        }
+        public PlayerNotificationTarget GetPlayerNotificationTarget() => (PlayerNotificationTarget)this.ActualInstance;
 
         /// <summary>
         /// Get the actual instance of `SegmentNotificationTarget`. If the actual instance is not `SegmentNotificationTarget`,
         /// the InvalidClassException will be thrown
         /// </summary>
         /// <returns>An instance of SegmentNotificationTarget</returns>
-        public SegmentNotificationTarget GetSegmentNotificationTarget()
-        {
-            return (SegmentNotificationTarget)this.ActualInstance;
-        }
+        public SegmentNotificationTarget GetSegmentNotificationTarget() => (SegmentNotificationTarget)this.ActualInstance;
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -123,10 +117,7 @@ namespace OneSignalApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
-        {
-            return JsonConvert.SerializeObject(this.ActualInstance, NotificationTarget.SerializerSettings);
-        }
+        public override string ToJson() => JsonConvert.SerializeObject(this.ActualInstance, NotificationTarget.SerializerSettings);
 
         /// <summary>
         /// Converts the JSON string into an instance of NotificationTarget
@@ -175,10 +166,7 @@ namespace OneSignalApi.Model
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NotificationTarget);
-        }
+        public override bool Equals(object input) => this.Equals(input as NotificationTarget);
 
         /// <summary>
         /// Returns true if NotificationTarget instances are equal
@@ -230,10 +218,7 @@ namespace OneSignalApi.Model
         /// <param name="writer">JSON writer</param>
         /// <param name="value">Object to be converted into a JSON string</param>
         /// <param name="serializer">JSON Serializer</param>
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            writer.WriteRawValue((string)(typeof(NotificationTarget).GetMethod("ToJson").Invoke(value, null)));
-        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) => writer.WriteRawValue((string)(typeof(NotificationTarget).GetMethod("ToJson").Invoke(value, null)));
 
         /// <summary>
         /// To convert a JSON string into an object
@@ -257,10 +242,7 @@ namespace OneSignalApi.Model
         /// </summary>
         /// <param name="objectType">Object type</param>
         /// <returns>True if the object can be converted</returns>
-        public override bool CanConvert(Type objectType)
-        {
-            return false;
-        }
+        public override bool CanConvert(Type objectType) => false;
     }
 
 }
